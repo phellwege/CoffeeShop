@@ -6,7 +6,7 @@ import { Link } from '@reach/router';
 export default () => {
     return (
         <div>
-            <h1>Frothy Fox Cafe</h1>
+            <h1>Cafe</h1>
             
         </div>
     )
