@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
 
-function register(){
+function itemDetails() {
 
 }
-export default register;
+export default itemDetails;
