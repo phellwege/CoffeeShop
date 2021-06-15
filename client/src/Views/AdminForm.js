@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from '@reach/router';
 import {navigate} from '@reach/router';
 
+//admin form makes officers
 
 function adminForm() {
 
@@ -65,20 +66,20 @@ export default (props) => {
             </p>
             <input type="submit"/>
 
-        {errors?.itemName && (
-            <span style={{ color: "red" }}>{errors?.itemName?.message}</span>
+        {errors?.firstName && (
+            <span style={{ color: "red" }}>{errors?.firstName?.message}</span>
         )}
-        {errors?.price && (
-            <span style={{ color: "red" }}>{errors?.price?.message}</span>
+        {errors?.lastName && (
+            <span style={{ color: "red" }}>{errors?.lastName?.message}</span>
         )}
-        {errors?.inventory && (
-            <span style={{ color: "red" }}>{errors?.inventory?.message}</span>
+        {errors?.email && (
+            <span style={{ color: "red" }}>{errors?.email?.message}</span>
         )}
-        {errors?.description && (
-            <span style={{ color: "red" }}>{errors?.description?.message}</span>
+        {errors?.username && (
+            <span style={{ color: "red" }}>{errors?.username?.message}</span>
         )}
-        {errors?.media && (
-            <span style={{ color: "red" }}>{errors?.media?.message}</span>
+        {errors?.password && (
+            <span style={{ color: "red" }}>{errors?.password?.message}</span>
         )}
         </form>
         </>
