@@ -21,6 +21,10 @@ const ItemSchema = new mongoose.Schema({
         type: String,
         required: [true, "Media is required"],
     },
+    Category: {
+        type: String,
+        required: [true, "Category is required"],
+    },
 
 }, { timestamps: true });
 module.exports.Item = mongoose.model('Item', ItemSchema);

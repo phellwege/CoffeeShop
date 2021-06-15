@@ -11,6 +11,7 @@ export default (props) => {
     const [inventory, setInventory] = useState("");
     const [description, setDescription] = useState("");
     const [media, setMedia] = useState("");
+    const [category, setCategory] = useState("");
     const [errors, setErrors] = useState(null);
     //handler when the form is submitted
 
@@ -58,6 +59,10 @@ export default (props) => {
             <p>
                 <label>Pictures</label><br/>
                 <input type="text" onChange={(e)=>setMedia(e.target.value)} value={media}/>
+            </p>
+            <p>
+                <label>category</label><br/>
+                <input type="text" onChange={(e)=>setCategory(e.target.value)} value={category}/>
             </p>
             <input type="submit"/>
 
