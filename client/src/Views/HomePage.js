@@ -5,9 +5,19 @@ import { Link } from '@reach/router';
 
 export default () => {
     return (
+        <>
         <div>
-            <h1>The Cafe</h1>
-            
+            <h3>
+                {/* Hello ${user.username} */}
+            </h3>
+            <div>
+                <h1>
+                    Welcome to the Cafe
+                </h1>
+            </div>
         </div>
+        
+        </>
     )
 }
+s
