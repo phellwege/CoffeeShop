@@ -5,8 +5,10 @@ import { Link } from '@reach/router';
 
 export default () => {
     return (
-        <>
         <div>
+            <p>
+                Login || Logout
+            </p>
             <h3>
                 {/* Hello ${user.username} */}
             </h3>
@@ -16,8 +18,5 @@ export default () => {
                 </h1>
             </div>
         </div>
-        
-        </>
     )
 }
-s

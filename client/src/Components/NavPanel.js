@@ -5,7 +5,9 @@ import { Link } from '@reach/router'
 function navPanel() {
 <ul>
     <li></li>
-    <li></li>
+    <li>
+        <Link to="/About"><p>About</p></Link>
+    </li>
     <li>
         ${item.itemName}
     </li>
