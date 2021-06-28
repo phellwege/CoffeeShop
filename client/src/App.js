@@ -5,7 +5,8 @@ import About from './Views/about';
 import adminForm from './Views/adminForm';
 import userProfile from './Views/userProfile';
 import officerForm from './Views/officerForm';
-import viewCart from './Views/viewCart'
+import viewCart from './Views/viewCart';
+import "./Main.css"
 
 function App() {
   return (

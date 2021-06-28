@@ -7,7 +7,7 @@ export default () => {
     return (
         <div>
             <p>
-                Login || Logout
+            <Link to="/">Login</Link> || <Link to="/">Logout</Link>
                 
             </p>
             <NavPanel/>

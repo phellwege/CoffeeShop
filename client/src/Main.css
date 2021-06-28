@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+h1 { 
+    font-weight: bold;
+}
+h3 {
+    font-weight: bold;
+    font-family: 'Source Serif Pro', serif;
+}
+h2{
+    font-family: 'Source Serif Pro', serif;
+}
+.google_maps {
+    width: 50%;
+    height: 50%;
+    margin: 2.5%;
+    color: black;
+    position: relative; 
+    overflow: hidden
+}
