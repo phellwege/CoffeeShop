@@ -4,6 +4,9 @@ import { Link } from '@reach/router'
 import MapContainer from '../Components/GoogleMaps'
 
 function About() {
+
+
+    return(
 <div>
     <div>
         <h2>Who we are</h2>
@@ -23,5 +26,5 @@ function About() {
         </div>
     </div>
 </div>
-}
+)}
 export default About;
