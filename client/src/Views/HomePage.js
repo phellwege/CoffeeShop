@@ -2,22 +2,21 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
 import NavPanel from '../Components/navPanel'
-
+import HeadPanel from '../Components/HeadPanel'
 export default () => {
     return (
         <div>
             <p>
-            <Link to="/">Login</Link> || <Link to="/">Logout</Link>
-                
+            <HeadPanel/>
             </p>
-            <NavPanel/>
             <h3>
                 {/* Hello ${user.username} */}
-            </h3>
+            </h3> 
             <div>
                 <h1>
                     Welcome to the Cafe
                 </h1>
+            <NavPanel/>
             </div>
         </div>
     )

@@ -2,12 +2,15 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
 import MapContainer from '../Components/GoogleMaps'
-
+import HeadPanel from '../Components/HeadPanel'
 function About() {
 
 
     return(
 <div>
+    <div>
+        <HeadPanel/>
+    </div>
     <Link to="/">Home</Link>
     <div>
         <h2>Who we are</h2>
