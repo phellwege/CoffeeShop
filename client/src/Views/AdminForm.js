@@ -5,7 +5,7 @@ import {navigate} from '@reach/router';
 
 //admin form makes officers
 
-function adminForm() {
+// function adminForm() {
 
 export default (props) => {
     const [firstName, setFirstName] = useState(""); 
@@ -41,7 +41,7 @@ export default (props) => {
 
 
     return (
-        <>
+        <div>
         <Link to={"/"}>Home</Link>
         <form onSubmit={onSubmitHandler}>
             <p>
@@ -66,7 +66,7 @@ export default (props) => {
             </p>
             <input type="submit"/>
 
-        {errors?.firstName && (
+        {/* {errors?.firstName && (
             <span style={{ color: "red" }}>{errors?.firstName?.message}</span>
         )}
         {errors?.lastName && (
@@ -80,9 +80,9 @@ export default (props) => {
         )}
         {errors?.password && (
             <span style={{ color: "red" }}>{errors?.password?.message}</span>
-        )}
+        )} */}
         </form>
-        </>
+        </div>
     )};
-}
-export default adminForm;
+// }
+// export default adminForm;

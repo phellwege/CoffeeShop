@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
-import MapContainer from './MapContainer.js'
+import MapContainer from '../Components/GoogleMaps'
 
-function about() {
-<>
+function About() {
+<div>
     <div>
         <h2>Who we are</h2>
         <p>loremIpsum</p>
@@ -22,6 +22,6 @@ function about() {
         <MapContainer />
         </div>
     </div>
-</>
+</div>
 }
-export default about;
+export default About;

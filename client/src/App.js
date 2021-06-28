@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import HomePage from './Views/HomePage';
-import About from './Views/About';
+import About from './Views/about';
 import adminForm from './Views/adminForm';
 import userProfile from './Views/userProfile';
 import officerForm from './Views/officerForm';

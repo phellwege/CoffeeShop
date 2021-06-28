@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
 import {navigate} from '@reach/router'
 
 // officer form makes items
-function officerForm() {
+// function officerForm() {
     
 
 export default (props) => {
@@ -39,7 +39,7 @@ export default (props) => {
             });
     }
     return (
-        <>
+        <div>
         <Link to={"/"}>Home</Link>
         <form onSubmit={onSubmitHandler}>
             <p>
@@ -68,7 +68,7 @@ export default (props) => {
             </p>
             <input type="submit"/>
 
-        {errors?.itemName && (
+        {/* {errors?.itemName && (
             <span style={{ color: "red" }}>{errors?.itemName?.message}</span>
         )}
         {errors?.price && (
@@ -82,10 +82,10 @@ export default (props) => {
         )}
         {errors?.media && (
             <span style={{ color: "red" }}>{errors?.media?.message}</span>
-        )}
+        )} */}
         </form>
-        </>
+        </div>
     )
 }
-}
-export default officerForm;
+// }
+// export default officerForm;
