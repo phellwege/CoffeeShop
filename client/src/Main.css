@@ -8,6 +8,7 @@
 }
 h1 { 
     font-weight: bold;
+    justify-content: center;
 }
 h3 {
     font-weight: bold;
@@ -23,4 +24,16 @@ h2{
     color: black;
     position: relative; 
     overflow: hidden
+}
+.page_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.logo img { 
+    border-radius: 20px;
+    height: 45%;
+    
+}
+.main_page_wrapper {
+    display: flex;
 }

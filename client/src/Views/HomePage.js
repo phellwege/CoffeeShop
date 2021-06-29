@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
-import NavPanel from '../Components/navPanel'
-import HeadPanel from '../Components/HeadPanel'
+import NavPanel from '../Components/navPanel';
+import HeadPanel from '../Components/HeadPanel';
+import '../Main.css';
+
 export default () => {
     return (
         <div>
-            <p>
             <HeadPanel/>
-            </p>
+            <div class="main_page_wrapper">
             <h3>
                 {/* Hello ${user.username} */}
             </h3> 
@@ -17,6 +18,7 @@ export default () => {
                     Welcome to the Cafe
                 </h1>
             <NavPanel/>
+            </div>
             </div>
         </div>
     )
