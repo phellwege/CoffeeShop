@@ -1,5 +1,5 @@
 
-
+const cookieParser = require('cookie-parser');
 const express = require("express");
 const cors = require("cors");
 const port = 8000;
@@ -20,6 +20,15 @@ const payload = {
 const userToken = jwt.sign(payload, process.env.SECRET_KEY);
 // req.body undefined without this!
 
+
+app.use(cookieParser());
+// Change the app.use(cors()) to the one below
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+
+
+res.cookie("mycookie", "mydata", { httpOnly: true }).json({
+    message: "This response has a cookie"
+});
 
 app.use(express.json());
 app.use(cors());
