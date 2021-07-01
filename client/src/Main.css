@@ -28,9 +28,9 @@ h2{
     height: 45%;
     
 }
+
 .main_page_wrapper {
     display: flex;
-    background-image:'./Static/Background.jpeg';
 }
 .about_wrapper {
     display: flex;

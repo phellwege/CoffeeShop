@@ -10,17 +10,16 @@ import BigBackGround from '../Static/Background.jpeg';
 
 export default () => {
     return (
-        <div>
-            style = {{
-            backgroundImage: `url(${BigBackGround})`,
-            backgroundPosition: 'center'
-            }}
-            
+        <div 
+        style = {{backgroundImage: `url(${BigBackGround})`,
+        position: 'center',
+        width: '100%'
+        }}>
             <HeadPanel/>
             <div class="main_page_wrapper">
-            <h3>
-                {/* Hello ${user.username} */}
-            </h3> 
+                <h3>
+                    {/* Hello ${user.username} */}
+                </h3> 
             <div>
                 <h1>
                     Welcome to the Cafe
