@@ -2,15 +2,20 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
 import Logo from '../Static/LogoCup.png'
+import cart_logo from '../Static/Cart1.png'
 import "../Main.css"
+
+
 function HeadPanel() {
     return (
         <div class="page_wrapper">
-            <div><Link to="/">Login</Link> || <Link to="/">Logout</Link></div>
-            <div class="logo">
-                <img src={Logo}/>
+            <div>
+                <Link to="/">Login</Link> || <Link to="/">Logout</Link>
             </div>
-            
+            <div>
+                {/* <img id="cart_logo" src={cart_logo}/>  */}
+                <img id="logo" src={Logo}/>
+            </div>
         </div>
     )
 }

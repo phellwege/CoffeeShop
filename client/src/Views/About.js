@@ -4,11 +4,12 @@ import { Link } from '@reach/router'
 import MapContainer from '../Components/GoogleMaps'
 import HeadPanel from '../Components/HeadPanel'
 import blank from '../Static/blank_dude.png'
+
 function About() {
     return(
 <div>
     <div>
-        <HeadPanel/><Link to="/">Home</Link>
+        <HeadPanel/>
     </div>
         <div class="about_wrapper">
     

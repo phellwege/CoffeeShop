@@ -6,9 +6,14 @@ function NavPanel() {
 
 return (
     <ul>
-    <li></li>
     <li>
-        <Link to="/About"><p>About</p></Link>
+        <Link to="/">Home</Link>
+    </li>
+    <li>
+        <Link to="/About">About</Link>
+    </li>
+    <li>
+        <Link to="/">Cart</Link>
     </li>
     <li>
         {/* ${item.itemName} */}
