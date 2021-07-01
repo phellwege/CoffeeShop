@@ -4,10 +4,18 @@ import { Link } from '@reach/router';
 import NavPanel from '../Components/navPanel';
 import HeadPanel from '../Components/HeadPanel';
 import '../Main.css';
+import BigBackGround from '../Static/Background.jpeg';
+
+
 
 export default () => {
     return (
         <div>
+            style = {{
+            backgroundImage: `url(${BigBackGround})`,
+            backgroundPosition: 'center'
+            }}
+            
             <HeadPanel/>
             <div class="main_page_wrapper">
             <h3>

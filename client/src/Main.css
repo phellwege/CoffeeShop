@@ -18,14 +18,7 @@ h3 {
 h2{
     font-weight: bold;
 }
-.google_maps {
-    width: 50%;
-    height: 50%;
-    margin: 2.5%;
-    color: black;
-    position: relative; 
-    overflow: hidden
-}
+
 .page_wrapper {
     display: flex;
     justify-content: space-between;
@@ -37,4 +30,32 @@ h2{
 }
 .main_page_wrapper {
     display: flex;
+    background-image:'./Static/Background.jpeg';
+}
+.about_wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.about_content {
+    margin-left: 15%;
+    margin: 2.5%;
+    padding: 2.5%;
+}
+.google_maps {
+    width: 50%;
+    height: 50%;
+    margin: 2.5%;
+    color: black;
+    /* position: relative;  */
+    overflow: hidden
+}
+.about_blank_dude {
+    display: flex;
+    flex-direction: row;
+    margin: 2.5%;
+}
+.about_blank_dude img{
+    width:20%;
+    padding: 2.5%;
 }
