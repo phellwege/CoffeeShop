@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Serif Pro', serif;
+    
+}
+h1 { 
+    font-weight: bold;
+    justify-content: center;
+    
+}
+h3 {
+    font-weight: bold;
+}
+h2{
+    font-weight: bold;
+}
+.page_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.page_wrapper a { 
+    color:darkgrey;
+}
+#logo { 
+    border-radius: 20px;
+    height: 45%;
+}
+#cart_logo {
+    border-radius: 20%;
+    height:5%;
+}

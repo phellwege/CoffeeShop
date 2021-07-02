@@ -4,12 +4,15 @@ import { Link } from '@reach/router'
 import MapContainer from '../Components/GoogleMaps'
 import HeadPanel from '../Components/HeadPanel'
 import blank from '../Static/blank_dude.png'
+import NavPanel from '../Components/navPanel'
+import Social from '../Components/social'
 
 function About() {
     return(
 <div>
     <div>
         <HeadPanel/>
+        <NavPanel/>
     </div>
         <div class="about_wrapper">
     
@@ -26,17 +29,31 @@ function About() {
         </div>
     </div>
     <div>
-        <h2>Contact</h2>
-        <h4>social</h4>
-        <h4>CoffeeCafe@email.com</h4>
-        <h4>Phone: +1(999)999-9999</h4>
-        <h4>address</h4>
+        <h2>Contact Us</h2>
+        
+        <h4>
+            CoffeeCafe@email.com
+        </h4>
+        <h4>
+            Phone: +1(999)999-9999
+        </h4>
+        <h4>
+            Address: 123 Main Street,
+            <br/>
+            Boise, ID 83705
+        </h4>
+        <Social/>
     </div>
-    <div>
-        <div class="google_maps">
-        <MapContainer />
+        <div class="about_right">
+            <div>
+                <div class="google_maps">
+                    <p>Located in beautiful Boise Idaho, You should move here...everyone else is.</p>
+                    <br/>
+                    <br/>
+                    <MapContainer />
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </div>
 )}

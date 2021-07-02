@@ -13,6 +13,9 @@ return (
         <Link to="/About">About</Link>
     </li>
     <li>
+        <Link to="/">Products</Link>
+    </li>
+    <li>
         <Link to="/">Cart</Link>
     </li>
     <li>

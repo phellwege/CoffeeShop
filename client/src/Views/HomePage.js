@@ -15,7 +15,7 @@ export default () => {
             backgroundImage: `url(${BigBackGround})`,
             position: 'center',
             width: '100%',
-            height: '100vh',
+            height: '120vh',
         }}>
             <HeadPanel/>
             <div class="main_page_wrapper">

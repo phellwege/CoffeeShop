@@ -11,7 +11,6 @@
 h1 { 
     font-weight: bold;
     justify-content: center;
-    
 }
 h3 {
     font-weight: bold;
@@ -20,9 +19,12 @@ h2{
     font-weight: bold;
 }
 
-.page_wrapper {
+/* .page_wrapper {
     display: flex;
     justify-content: space-between;
+}
+.page_wrapper a { 
+    color:darkgrey;
 }
 #logo { 
     border-radius: 20px;
@@ -30,14 +32,14 @@ h2{
 }
 #cart_logo {
     border-radius: 20%;
-    height:15%;
-}
+    height:5%;
+} */
 .main_page_wrapper {
     display: flex;
     color:white;
 }
 .main_page_wrapper a { 
-    color:white;
+    color:darkgrey;
 }
 .about_wrapper {
     display: flex;
@@ -65,4 +67,18 @@ h2{
 .about_blank_dude img{
     width:20%;
     padding: 2.5%;
+    border-radius: 50%;
+}
+.about_right { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+ul a {
+    text-decoration: none;
+    font-weight: bold;
+}
+#social_media {
+    height: 35px;
+    border-radius: 20%;
 }
