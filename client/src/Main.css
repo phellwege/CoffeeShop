@@ -19,7 +19,7 @@ h2{
     font-weight: bold;
 }
 
-/* .page_wrapper {
+.page_wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -33,7 +33,7 @@ h2{
 #cart_logo {
     border-radius: 20%;
     height:5%;
-} */
+}
 .main_page_wrapper {
     display: flex;
     color:white;

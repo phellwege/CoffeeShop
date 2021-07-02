@@ -5,7 +5,6 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Source Serif Pro', serif;
-    
 }
 h1 { 
     font-weight: bold;
@@ -18,18 +17,19 @@ h3 {
 h2{
     font-weight: bold;
 }
-.page_wrapper {
+.head_page_wrapper {
     display: flex;
     justify-content: space-between;
 }
-.page_wrapper a { 
+.head_page_wrapper a { 
     color:darkgrey;
 }
-#logo { 
-    border-radius: 20px;
+#coffee_logo { 
+    border-radius: 20%;
     height: 45%;
 }
 #cart_logo {
     border-radius: 20%;
     height:5%;
+    background-color: white;
 }

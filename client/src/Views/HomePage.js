@@ -19,9 +19,9 @@ export default () => {
         }}>
             <HeadPanel/>
             <div class="main_page_wrapper">
-                <h3>
-                    {/* Hello ${user.username} */}
-                </h3> 
+                {/* <h3>
+                    Hello ${user.username}
+                </h3>  */}
             <div>
                 <h1>
                     Welcome to the Cafe

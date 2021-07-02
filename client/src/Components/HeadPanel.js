@@ -8,14 +8,16 @@ import "../HeadPanel.css"
 
 function HeadPanel() {
     return (
-        <div class="page_wrapper">
+        <div class="head_page_wrapper">
             <div>
                 <Link to="/">Login</Link> || <Link to="/">Logout</Link>
             </div>
             <div>
                 {/* <img id="cart_logo" src={cart_logo}/>  */}
+            </div>
+            <div>
                 {/* for some reason whenever I add in this second media element the CSS goes nuts */}
-                <img id="logo" src={Logo}/>
+                <img id="coffee_logo" src={Logo}/>
             </div>
         </div>
     )
