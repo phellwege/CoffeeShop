@@ -22,12 +22,10 @@ export default () => {
                 {/* <h3>
                     Hello ${user.username}
                 </h3>  */}
-            <div>
+            <NavPanel/>
                 <h1>
                     Welcome to the Cafe
                 </h1>
-            <NavPanel/>
-            </div>
             </div>
         </div>
     )

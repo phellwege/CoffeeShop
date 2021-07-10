@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Source Serif Pro', serif;
-    
+    /* border: 1px solid red; */
 }
 h1 { 
     font-weight: bold;
@@ -19,7 +19,7 @@ h2{
     font-weight: bold;
 }
 
-.page_wrapper {
+/* .page_wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -33,7 +33,7 @@ h2{
 #cart_logo {
     border-radius: 20%;
     height:5%;
-}
+} */
 .main_page_wrapper {
     display: flex;
     color:white;
@@ -43,21 +43,23 @@ h2{
 }
 .about_wrapper {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
 }
 .about_content {
-    margin-left: 15%;
     margin: 2.5%;
     padding: 2.5%;
 }
+.about_contact_map {
+    display: flex;
+    flex-direction: row;
+}
 .google_maps {
-    width: 50%;
-    height: 50%;
+    width: 45%;
+    height: 45%;
     margin: 2.5%;
     color: black;
-    /* position: relative;  */
-    overflow: hidden
+    position: relative; 
+    overflow: hidden;
 }
 .about_blank_dude {
     display: flex;
@@ -69,10 +71,13 @@ h2{
     padding: 2.5%;
     border-radius: 50%;
 }
-.about_right { 
+.about_contact { 
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    width:45%;
+}
+ul {
+    list-style: none;
 }
 ul a {
     text-decoration: none;
@@ -81,4 +86,17 @@ ul a {
 #social_media {
     height: 35px;
     border-radius: 20%;
+}
+.navigation { 
+    padding: 2.5%;
+    margin: 2.5%;
+    color:darkgrey;
+    border: 1px solid darkgrey;
+    border-radius: .5em;
+}
+.navigation a {
+    color:darkgrey;
+}
+.cart_wrapper {
+    display: flex;
 }

@@ -14,9 +14,9 @@ function HeadPanel() {
             </div>
             <div>
                 {/* <img id="cart_logo" src={cart_logo}/>  */}
+                {/* for some reason whenever I add in this second media element the CSS goes nuts */}
             </div>
             <div>
-                {/* for some reason whenever I add in this second media element the CSS goes nuts */}
                 <img id="coffee_logo" src={Logo}/>
             </div>
         </div>

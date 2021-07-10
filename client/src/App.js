@@ -2,10 +2,10 @@ import React from 'react';
 import { Router } from '@reach/router';
 import HomePage from './Views/HomePage';
 import About from './Views/about';
-import adminForm from './Views/adminForm';
-import userProfile from './Views/userProfile';
-import officerForm from './Views/officerForm';
-import viewCart from './Views/viewCart';
+import AdminForm from './Views/adminForm';
+import UserProfile from './Views/userProfile';
+import OfficerForm from './Views/officerForm';
+import ViewCart from './Views/viewCart';
 import "./Main.css"
 
 function App() {
@@ -16,10 +16,10 @@ function App() {
           <Router>
             <HomePage path="/"/>
             <About path="/About"/>
-            <adminForm path="/adminForm"/>
-            <userProfile path="/userProfile"/>
-            <officerForm path="/officer"/>
-            <viewCart path="/Cart"/>
+            <AdminForm path="/adminForm"/>
+            <UserProfile path="/userProfile"/>
+            <OfficerForm path="/officer"/>
+            <ViewCart path="/Cart"/>
           </Router>
       </React.Fragment>
     </div>

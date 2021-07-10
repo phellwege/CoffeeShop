@@ -20,6 +20,7 @@ h2{
 .head_page_wrapper {
     display: flex;
     justify-content: space-between;
+    color: darkgrey;
 }
 .head_page_wrapper a { 
     color:darkgrey;
