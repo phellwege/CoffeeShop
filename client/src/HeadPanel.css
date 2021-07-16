@@ -21,6 +21,7 @@ h2{
     display: flex;
     justify-content: space-between;
     color: darkgrey;
+    height: 15vh;
 }
 .head_page_wrapper a { 
     color:darkgrey;

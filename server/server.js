@@ -3,8 +3,9 @@ const cookieParser = require('cookie-parser');
 const express = require("express");
 const cors = require("cors");
 const port = 8000;
+const db_name = "ecommerce_db";
 require('dotenv').config();
-require("./config/mongoose.config");
+require("./config/mongoose.config")(ecommerce_db);
 const jwt = require("jsonwebtoken");
 
 // mongoose.config could be changed to export a function that lets us pass in a db_name like we pass app into the function that our routes file exports

@@ -4,6 +4,10 @@ import { Link } from '@reach/router';
 import HeadPanel from '../Components/HeadPanel';
 import NavPanel from '../Components/navPanel';
 import cart_logo from '../Static/Cart2.png';
+import cup from '../Static/cup.jpeg';
+import cup2 from '../Static/cup2.jpeg';
+import bean from '../Static/bean1.jpeg';
+import bean2 from '../Static/bean2.jpeg';
 
 import '../Main.css';
 
@@ -25,18 +29,39 @@ function viewCart() {
                     <h2>
                         Items
                     </h2>
+                    <br/>
                     <ul>
                         <li>
                             cup
+                            <br/>
+                            <img src={cup}/> 
+                            <br/>
+                            <p>this is a description for this product</p>
+                            <br/>
                         </li>
                         <li>
                             cup2
+                            <br/>
+                            <img src={cup2}/> 
+                            <br/>
+                            <p>this is a description for this product</p>
+                            <br/>
                         </li>
                         <li>
                             bean1
+                            <br/>
+                            <img src={bean}/> 
+                            <br/>
+                            <p>this is a description for this product</p>
+                            <br/>
                         </li>
                         <li>
                             bean2
+                            <br/>
+                            <img src={bean2}/> 
+                            <br/>
+                            <p>this is a description for this product</p>
+                            <br/>
                         </li>
                     </ul>
                     <br/>

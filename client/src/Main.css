@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Source Serif Pro', serif;
-    /* border: 1px solid red; */
+    /* border: 1px solid red;  */
 }
 h1 { 
     font-weight: bold;
@@ -103,15 +103,16 @@ ul a {
     width: 100vw;
 }
 #cart_lower_center { 
-    align-items: center;
     padding: 1.5%;
     margin: 2%;
+    text-align: center;
 }
 .cart_lower_section ul img {
-    height: 20%;
+    height: 150px;
+    border-radius: 50%;
 }
 #cart_logo2 {
-    height: 65%;
+    height: 55%;
     overflow: hidden;
 }
 #checkout_button {
