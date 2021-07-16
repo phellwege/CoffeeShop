@@ -88,11 +88,16 @@ ul a {
 .cart_lower_section {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* align-items: center; */
 }
 .cart_lower_section h1 {
     height: 10%;
     width: 100vw;
+}
+#cart_lower_center { 
+    align-items: center;
+    padding: 1.5%;
+    margin: 2%;
 }
 .cart_lower_section ul img {
     height: 20%;
@@ -100,4 +105,7 @@ ul a {
 #cart_logo2 {
     height: 65%;
     overflow: hidden;
+}
+#checkout_button {
+    width:10%;
 }

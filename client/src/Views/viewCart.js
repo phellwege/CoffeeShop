@@ -15,31 +15,33 @@ function viewCart() {
                 {/* <h3>
                     Hello ${user.username}
                 </h3>  */}
+                
                 <div class="cart_lower_section">
             <NavPanel/>
                 <h1>
                     <img id="cart_logo2" src={cart_logo}/> Shopping Cart 
                 </h1>
+                <div id="cart_lower_center">
                     <h2>
                         Items
                     </h2>
                     <ul>
                         <li>
-                            item 1
+                            cup
                         </li>
                         <li>
-                            item 2
+                            cup2
                         </li>
                         <li>
-                            item 3
+                            bean1
                         </li>
                         <li>
-                            item 4
-                        </li>
-                        <li>
-                            item 5
+                            bean2
                         </li>
                     </ul>
+                    <br/>
+                    <button id="checkout_button">Checkout</button>
+                    </div>
                 </div>
         </div>
         </div>
