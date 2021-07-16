@@ -7,6 +7,7 @@ import blank from "../Static/blank_dude.png";
 import NavPanel from "../Components/navPanel";
 import Social from "../Components/social";
 
+
 function About() {
     return (
         <div>

@@ -33,4 +33,5 @@ h2{
     border-radius: 20%;
     height:5%;
     background-color: white;
+    overflow: hidden;
 }

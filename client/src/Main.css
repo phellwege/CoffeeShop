@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Source Serif Pro', serif;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 h1 { 
     font-weight: bold;
@@ -83,4 +83,21 @@ ul a {
 }
 .cart_wrapper {
     display: flex;
+    overflow: hidden;
+}
+.cart_lower_section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.cart_lower_section h1 {
+    height: 10%;
+    width: 100vw;
+}
+.cart_lower_section ul img {
+    height: 20%;
+}
+#cart_logo2 {
+    height: 65%;
+    overflow: hidden;
 }
