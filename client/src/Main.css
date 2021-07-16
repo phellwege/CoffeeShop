@@ -43,8 +43,12 @@ h2{
     color: black;
     /* position: relative !important;  */
     overflow: hidden;
+    margin-top: -10%;
+    padding: 1%;
 }
-
+.google_maps p {
+    margin: 1%;
+}
 .about_blank_dude {
     display: flex;
     flex-direction: row;
@@ -80,6 +84,10 @@ ul a {
 }
 .navigation a {
     color:darkgrey;
+}
+.navigation {
+    width:8.5%;
+    height: 5.5%;
 }
 .cart_wrapper {
     display: flex;
