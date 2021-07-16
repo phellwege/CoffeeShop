@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import axios from "axios";
 import { Link } from "@reach/router";
 import MapContainer from "../Components/GoogleMaps";
@@ -50,12 +50,12 @@ function About() {
                     </h4>
                     <Social />
                     </div>
-                        <div class="google_maps">
-                            <p>
-                                Located in beautiful Boise Idaho, You should move
-                                here...everyone else is.
-                            </p>
-                            <MapContainer />
+                            <div class="google_maps">
+                                <p>
+                                    Located in beautiful Boise Idaho, You should move
+                                    here...everyone else already has.
+                                </p>
+                                <MapContainer/>
                             </div>
                         </div>
                     </div>

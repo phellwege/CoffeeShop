@@ -6,7 +6,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Source Serif Pro', serif;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 h1 { 
     font-weight: bold;
@@ -40,11 +40,11 @@ h2{
 .google_maps {
     width: 45%;
     height: 45%;
-    margin: 2.5%;
     color: black;
-    position: relative; 
+    /* position: relative !important;  */
     overflow: hidden;
 }
+
 .about_blank_dude {
     display: flex;
     flex-direction: row;

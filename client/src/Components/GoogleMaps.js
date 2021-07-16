@@ -5,6 +5,10 @@ const mapStyles = {
     width: '100%',
     height: '100%',
 };
+const containerStyle = {
+    position: 'absolute', 
+    width: '45%', height:'45%'
+};
 
 export class MapContainer extends Component {
     state = {
@@ -34,6 +38,7 @@ export class MapContainer extends Component {
                 google={this.props.google}
                 zoom={14}
                 style={mapStyles}
+                containerStyle={containerStyle}
                 initialCenter={
                     {
                         lat: 43.618881,
