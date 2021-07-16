@@ -22,7 +22,6 @@ function register() {
                 })
                 .then((res) => {
                     console.log(res);
-
                     setUsername("");
                     setEmail("");
                     setPassword("");
@@ -30,7 +29,6 @@ function register() {
                 })
                 .catch((err) => {
                     console.log(err);
-
                     setErrors(err.response.data.errors);
                 });
         };

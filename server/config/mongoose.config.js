@@ -5,7 +5,7 @@ module.exports = ecommerce_db => {mongoose
         useUnifiedTopology: true,
         useFindAndModify: false
 })
-mongoose
+
     .then(() => console.log("Established a connection to the database"))
     .catch(err => console.log("Something went wrong when connecting to the database", err));
 }

@@ -4,8 +4,9 @@ const express = require("express");
 const cors = require("cors");
 const port = 8000;
 const db_name = "ecommerce_db";
+
 require('dotenv').config();
-require("./config/mongoose.config")(ecommerce_db);
+require("./config/mongoose.config")(process.env.DB_NAME);
 const jwt = require("jsonwebtoken");
 
 // mongoose.config could be changed to export a function that lets us pass in a db_name like we pass app into the function that our routes file exports
@@ -13,9 +14,14 @@ const jwt = require("jsonwebtoken");
 // require("./config/mongoose.config")(db_name);
 
 const app = express();
-const payload = {
-    id: user._id
-};
+// const payload = {
+//     id: user._id
+// };
+
+const server = app.listen(process.env.DB_PORT, () =>
+    console.log(`Listening on port ${process.env.DB_PORT}`)
+);
+
 
 // notice that we're using the SECRET_KEY from our .env file
 const userToken = jwt.sign(payload, process.env.SECRET_KEY);
