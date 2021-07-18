@@ -86,8 +86,8 @@ ul a {
     color:darkgrey;
 }
 .navigation {
-    width:8.5%;
-    height: 5.5%;
+    width:14%;
+    height: 75px;
 }
 .cart_wrapper {
     display: flex;
@@ -98,7 +98,8 @@ ul a {
     flex-direction: column;
     /* align-items: center; */
 }
-.cart_lower_section h1 {
+.cart_upper_section {
+    display: flex;
     height: 10%;
     width: 100vw;
 }
@@ -113,8 +114,8 @@ ul a {
 }
 #cart_logo2 {
     height: 55%;
-    overflow: hidden;
 }
 #checkout_button {
     width:10%;
+    font-weight: bold;
 }

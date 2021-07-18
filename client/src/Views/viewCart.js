@@ -21,10 +21,12 @@ function viewCart() {
                 </h3>  */}
                 
                 <div class="cart_lower_section">
-            <NavPanel/>
+            <div class="cart_upper_section">
+                <NavPanel/>
                 <h1>
                     <img id="cart_logo2" src={cart_logo}/> Shopping Cart 
                 </h1>
+            </div>
                 <div id="cart_lower_center">
                     <h2>
                         Items

@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const port = 8000;
 const db_name = "ecommerce_db";
-
+require("./routes/user.routes")(app);
 require('dotenv').config();
 require("./config/mongoose.config")(process.env.DB_NAME);
 const jwt = require("jsonwebtoken");
@@ -24,7 +24,7 @@ const server = app.listen(process.env.DB_PORT, () =>
 
 
 // notice that we're using the SECRET_KEY from our .env file
-const userToken = jwt.sign(payload, process.env.SECRET_KEY);
+// const userToken = jwt.sign(payload, process.env.SECRET_KEY);
 // req.body undefined without this!
 
 
@@ -33,13 +33,13 @@ app.use(cookieParser());
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 
 
-res.cookie("mycookie", "mydata", { httpOnly: true }).json({
-    message: "This response has a cookie"
-});
+// res.cookie("mycookie", "mydata", { httpOnly: true }).json({
+//     message: "This response has a cookie"
+// });
 
 app.use(express.json());
 app.use(cors());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ credentials: true, extended: true, origin:"http://localhost:3000" }));
 
 
 app.listen(port, () =>
