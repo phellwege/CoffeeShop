@@ -90,7 +90,6 @@ ul a {
 }
 .cart_wrapper {
     display: flex;
-    overflow: hidden;
 }
 .cart_lower_section {
     display: flex;
@@ -117,4 +116,10 @@ ul a {
 #checkout_button {
     width:10%;
     font-weight: bold;
+}
+.products_wrapper {
+    display: flex;
+}
+.product_wrapper {
+    display: flex;
 }

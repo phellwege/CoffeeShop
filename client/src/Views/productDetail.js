@@ -4,11 +4,11 @@ import { Link } from '@reach/router'
 import HeadPanel from '../Components/HeadPanel';
 import NavPanel from '../Components/navPanel';
 
-function products() {
+function productDetail() {
     return (
         <div>
             <HeadPanel/>
-                <div class="products_wrapper">
+                <div class="product_wrapper">
                     {/* <h3>
                         Hello ${user.username}
                     </h3>  */}
@@ -17,4 +17,4 @@ function products() {
                 </div>
         </div>
 )}
-export default products;
+export default productDetail;
