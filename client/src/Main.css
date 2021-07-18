@@ -41,9 +41,8 @@ h2{
     width: 45%;
     height: 45%;
     color: black;
-    /* position: relative !important;  */
     overflow: hidden;
-    margin-top: -10%;
+    margin-top: -15%;
     padding: 1%;
 }
 .google_maps p {

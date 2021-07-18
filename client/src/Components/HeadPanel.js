@@ -13,7 +13,7 @@ function HeadPanel() {
                 <Link to="/">Login</Link> || <Link to="/">Logout</Link>
             </div>
             <div>
-                {/* <img id="cart_logo" src={cart_logo}/>  */}
+                <img id="cart_logo" src={cart_logo}/> 
                 {/* for some reason whenever I add in this second media element the CSS goes nuts */}
             </div>
             <div>
