@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const port = 8000;
 const db_name = "ecommerce_db";
-require("./routes/user.routes")(app);
+
 require('dotenv').config();
 require("./config/mongoose.config")(process.env.DB_NAME);
 const jwt = require("jsonwebtoken");
@@ -40,7 +40,7 @@ app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ credentials: true, extended: true, origin:"http://localhost:3000" }));
-
+require("./routes/user.routes")(app);
 
 app.listen(port, () =>
     console.log(`Listening on port ${port} for REQuests to RESpond to.`)
