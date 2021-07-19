@@ -4,7 +4,6 @@ const express = require("express");
 const cors = require("cors");
 const port = 8000;
 const db_name = "ecommerce_db";
-
 require('dotenv').config();
 require("./config/mongoose.config")(process.env.DB_NAME);
 const jwt = require("jsonwebtoken");
@@ -28,9 +27,6 @@ const server = app.listen(process.env.DB_PORT, () =>
 // req.body undefined without this!
 
 
-app.use(cookieParser());
-// Change the app.use(cors()) to the one below
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 
 
 // res.cookie("mycookie", "mydata", { httpOnly: true }).json({
@@ -38,7 +34,8 @@ app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 // });
 
 app.use(express.json());
-app.use(cors());
+app.use(cookieParser());
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.urlencoded({ credentials: true, extended: true, origin:"http://localhost:3000" }));
 require("./routes/user.routes")(app);
 

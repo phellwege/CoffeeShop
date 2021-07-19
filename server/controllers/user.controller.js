@@ -3,7 +3,19 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
-
+    index:(request, response) => {
+        User.find()
+        .sort({ type: 1 })
+        .then(data => response.json({results:data}))
+        .catch(err => response.json(err.errors));
+},
+createUser: (request, response) => {
+    User.create( request.body )
+        .then(data => response.json(data))
+        .catch(err => {
+            response.status(400).json(err);
+        });
+},
     register: (req, res) => {
         User.create(req.body)
             .then(user => {
@@ -49,19 +61,16 @@ module.exports = {
             })
             .json({ msg: "ok" });
     },
-
     logout2(req, res) {
         res.clearCookie("usertoken");
         res.json({ msg: "usertoken cookie cleared" });
     },
     getLoggedInUser(req, res) {
         const decodedJWT = jwt.decode(req.cookies.usertoken, { complete: true });
-
         User.findById(decodedJWT.payload._id)
             .then((user) => res.json(user))
             .catch((err) => res.json(err));
     },
-
     getUser: (request, response) => {
         User.findOne({ _id: request.params.id })
             .then(data => response.json(data))
