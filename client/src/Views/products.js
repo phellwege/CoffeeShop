@@ -9,11 +9,24 @@ function products() {
         <div>
             <HeadPanel/>
                 <div class="products_wrapper">
-                    {/* <h3>
+                    <div class="products_header">
+                        {/* <h3>
                         Hello ${user.username}
-                    </h3>  */}
-                    <NavPanel/>
-
+                        </h3>  */}
+                        <NavPanel/>
+                        <h1>
+                            Products
+                        </h1>
+                    </div>
+                    <div id="products_category">
+                    <h2>
+                        Categories
+                    </h2>
+                    <ul>
+                        <li>Sampler</li>
+                        {/* <li>${item.category}</li> */}
+                    </ul>
+                    </div>
                 </div>
         </div>
 )}

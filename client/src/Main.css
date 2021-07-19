@@ -25,6 +25,9 @@ h2{
 .main_page_wrapper a { 
     color:darkgrey;
 }
+.about_header {
+    display: flex;
+}
 .about_wrapper {
     display: flex;
     flex-direction: column;
@@ -80,6 +83,8 @@ ul a {
     color:darkgrey;
     border: 1px solid darkgrey;
     border-radius: .5em;
+    text-shadow: .5px .5px black;
+    font-weight: bold;
 }
 .navigation a {
     color:darkgrey;
@@ -119,6 +124,14 @@ ul a {
 }
 .products_wrapper {
     display: flex;
+    flex-direction: column;
+}
+.products_header {
+    display: flex;
+}
+#products_category {
+    margin: 10px;
+    padding: 10px;
 }
 .product_wrapper {
     display: flex;

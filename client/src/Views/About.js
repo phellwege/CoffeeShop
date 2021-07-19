@@ -13,7 +13,12 @@ function About() {
         <div>
             <HeadPanel />
             <div class="about_wrapper">
-                <NavPanel />
+                <div class="about_header">
+                    <NavPanel />
+                    <h1>
+                        About us
+                    </h1>
+                    </div>
                 <div class="about_content">
                     <h2>Who we are</h2>
                     <p>
