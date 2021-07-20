@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import HomePage from './Views/HomePage';
 import About from './Views/about';
-import AdminForm from './Components/adminForm';
+import AdminAdd from './Views/adminAdd';
 import UserProfile from './Views/userProfile';
 import OfficerForm from './Components/officerForm';
 import ViewCart from './Views/viewCart';
@@ -21,7 +21,7 @@ function App() {
           <Router>
             <HomePage path="/"/>
             <About path="/About"/>
-            <AdminForm path="/adminForm"/>
+            <AdminAdd path="/adminAdd"/>
             <UserProfile path="/userProfile"/>
             <OfficerForm path="/officer"/>
             <ViewCart path="/Cart"/>

@@ -4,8 +4,6 @@ import { Link } from '@reach/router';
 import {navigate} from '@reach/router'
 
 // officer form makes items
-// function officerForm() {
-    
 
 export default (props) => {
     const [itemName, setItemName] = useState(""); 
@@ -68,7 +66,7 @@ export default (props) => {
             </p>
             <input type="submit"/>
 
-        {/* {errors?.itemName && (
+        {errors?.itemName && (
             <span style={{ color: "red" }}>{errors?.itemName?.message}</span>
         )}
         {errors?.price && (
@@ -82,10 +80,8 @@ export default (props) => {
         )}
         {errors?.media && (
             <span style={{ color: "red" }}>{errors?.media?.message}</span>
-        )} */}
+        )}
         </form>
         </div>
     )
 }
-// }
-// export default officerForm;

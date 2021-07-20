@@ -4,7 +4,6 @@ import { Link } from '@reach/router';
 import {navigate} from '@reach/router';
 
 //admin form makes officers
-// function adminForm() {
 
 export default (props) => {
     const [firstName, setFirstName] = useState(""); 
@@ -39,7 +38,6 @@ export default (props) => {
 
     return (
         <div>
-        <Link to={"/"}>Home</Link>
         <form onSubmit={onSubmitHandler}>
             <p>
                 <label>first name</label>
@@ -100,5 +98,3 @@ export default (props) => {
         </form>
         </div>
     )};
-// }
-// export default adminForm;
