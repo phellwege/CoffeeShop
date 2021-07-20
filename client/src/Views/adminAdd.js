@@ -4,14 +4,20 @@ import { Link } from '@reach/router';
 import NavPanel from '../Components/navPanel';
 import HeadPanel from '../Components/HeadPanel';
 import SignUp from '../Components/adminForm';
+import OfficerForm from '../Components/officerForm';
+import Items from '../Components/items';
+
 import '../Main.css';
 
 function adminAdd() {
     return (
         <div>
             <h1>
-                    Admin
-                </h1>
+                Admin 
+            </h1>
+            <h2>
+                <Link to="/">View site</Link>
+            </h2>
             <div class="register_page_wrapper">
                 <div id="login">
                     <h3>
@@ -33,10 +39,12 @@ function adminAdd() {
                 </p>
                 </div>
                 <div id="add_items">
+                    <OfficerForm/>
                     This is where we'll add the add items
                 </div>
                 <div id="remove_items">
-                    This is where we'll remove items
+                    This is where we'll display and remove items
+                    <Items/>
                 </div>
             </div>
         </div>

@@ -13,7 +13,9 @@ function HeadPanel() {
                 <Link to="/userLogin">Login</Link> || <Link to="/">Logout</Link>
             </div>
             <div>
-                
+                {/* <h3>
+                    Hello ${user.username}
+                </h3>  */}
                 {/* for some reason whenever I add in this second media element the CSS goes nuts */}
             </div>
             <div class="logos">

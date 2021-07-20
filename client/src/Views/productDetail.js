@@ -9,9 +9,6 @@ function productDetail() {
         <div>
             <HeadPanel/>
                 <div class="product_wrapper">
-                    {/* <h3>
-                        Hello ${user.username}
-                    </h3>  */}
                     <NavPanel/>
 
                 </div>

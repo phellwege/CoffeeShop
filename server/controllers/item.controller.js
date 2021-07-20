@@ -2,7 +2,8 @@ const { Item } = require('../models/item.model');
 
 module.exports = {
     index:(request, response) => {
-        Item.find().sort({name:1})
+        Item.find()
+        .sort({ name:1 })
         .then(data => response.json({results:data}))
         .catch(err => response.json(err.errors));
 },

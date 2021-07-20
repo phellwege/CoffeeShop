@@ -38,7 +38,9 @@ export default (props) => {
     }
     return (
         <div>
-        <Link to={"/"}>Home</Link>
+            <h2>
+                Add Item
+            </h2>
         <form onSubmit={onSubmitHandler}>
             <p>
                 <label>Item name</label><br/>
@@ -64,6 +66,7 @@ export default (props) => {
                 <label>category</label><br/>
                 <input type="text" onChange={(e)=>setCategory(e.target.value)} value={category}/>
             </p>
+            <br/>
             <input type="submit"/>
 
         {errors?.itemName && (

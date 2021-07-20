@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
 
-function items() {
+
+export default props => {
     const { removeFromDom } = props;
     const deleteItem = (itemId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + itemId)
@@ -10,14 +11,33 @@ function items() {
                 removeFromDom(itemId)
             })
     }
+    const {} = props;
+    const updateExistingItem = (itemId) => {
+        axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
+            .then(res => {
+                updateExistingItem(itemId)
+            })
+    }
+
     return (
         <div>
-            {props.items.map((item, idx) => {
-                return <p key={idx}><Link to={`/items/${item._id}`}>{item.itemName}</Link> <button onClick={(e) => { deleteItem(item._id) }}>
+            { props.items && props.items.map((item, idx) => {
+                return <p key={idx}>
+                    <Link to={`/items/${item._id}`}>
+                        {item.itemName}
+                    </Link> 
+                    {item.price} 
+                    {item.inventory} 
+                    {item.description} 
+                    {item.media} 
+                    {item.category}
+                    <button onClick={(e) => { updateExistingItem(item._id) }}>
+                    Edit
+                    </button>
+                    <button onClick={(e) => { deleteItem(item._id) }}>
                     Delete
                     </button></p>
             })}
         </div>
     )
 }
-export default items;
