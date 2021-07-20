@@ -1,100 +1,142 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
-import { Link } from '@reach/router';
-import {navigate} from '@reach/router';
+
 
 //admin form makes officers
-
-export default (props) => {
-    const [firstName, setFirstName] = useState(""); 
+const OfficerSignUp = (props) => {
+    const [username, setUsername] = useState("");
+    const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
-    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState(null);
-    //handler when the form is submitted
 
-    const onSubmitHandler = e => {
-        e.preventDefault();
-        const data = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            username: username,
-            password: password,
-        };
-        axios.post('http://localhost:8000/api/officer',
-            data,
-        )
-            .then(res => {
-                console.log(res)
-                navigate('/')
-            })
-            .catch(err=>{
-                console.log(err.response.data.errors);
-                setErrors(err.response.data.errors);
-            });
-    }
+const register = (event) => {
+    event.preventDefault();
 
+    const newOfficer = { username, firstName, lastName, email, password, confirmPassword };
+
+    axios
+        .post("http://localhost:8000/api/register", newOfficer, {
+            withCredentials: true,
+        })
+        .then((res) => {
+            console.log(res);
+            setUsername("");
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setPassword("");
+            setConfirmPassword("");
+        })
+        .catch((err) => {
+            console.log(err);
+            setErrors(err.response.data.errors);
+        });
+};
     return (
-        <div>
-        <form onSubmit={onSubmitHandler}>
-            <p>
-                <label>first name</label>
-                <br/>
-                <input 
-                    type="text" 
-                    onChange={(e)=>setFirstName(e.target.value)} 
-                    value={firstName}
-                    />
-            </p>
-            <p>
-                <label>Last name</label>
-                <br/>
-                <input 
-                    type="text" 
-                    onChange={(e)=>setLastName(e.target.value)} 
-                    value={lastName}
-                />
-            </p>
-            <p>
-                <label>email</label><br/>
-                <input 
-                    type="text" 
-                    onChange={(e)=>setEmail(e.target.value)} 
-                    value={email}
-                />
-            </p>
-            <p>
-                <label>Username</label>
-                <br/>
-                <input 
-                    type="text" 
-                    onChange={(e)=>setUsername(e.target.value)} 
-                    value={username}
-                />
-            </p>
-            <p>
-                <label>Password</label><br/>
-                <input type="text" onChange={(e)=>setPassword(e.target.value)} value={password}/>
-            </p>
-            <input type="submit"/>
+        <fieldset>
+                <legend>Register</legend>
 
-        {errors?.firstName && (
-            <span style={{ color: "red" }}>{errors?.firstName?.message}</span>
-        )}
-        {errors?.lastName && (
-            <span style={{ color: "red" }}>{errors?.lastName?.message}</span>
-        )}
-        {errors?.email && (
-            <span style={{ color: "red" }}>{errors?.email?.message}</span>
-        )}
-        {errors?.username && (
-            <span style={{ color: "red" }}>{errors?.username?.message}</span>
-        )}
-        {errors?.password && (
-            <span style={{ color: "red" }}>{errors?.password?.message}</span>
-        )}
-        </form>
-        </div>
-    )};
+                <form onSubmit={register}>
+                    <div className="form-group">
+                        <label>Username:</label>
+                        <input
+                            type="text"
+                            name="username"
+                            onChange={(e) => setUsername(e.target.value)}
+                            value={username}
+                        />
+                        {/* ?. is called optional chaining, lets you safely try to access keys that might not exist and avoid errors */}
+                        {errors?.username && (
+                            <span className="error-message">
+                                {errors.username?.properties?.message}
+                            </span>
+                        )}
+                    </div>
+                        <br/>
+                    <div className="form-group">
+                        <label>First Name:</label>
+                        <input
+                            type="text"
+                            name="firstName"
+                            onChange={(e) => setFirstName(e.target.value)}
+                            value={firstName}
+                        />
+                        {errors?.firstName && (
+                            <span className="error-message">
+                                {errors.firstName?.properties?.message}
+                            </span>
+                        )}
+                    </div>
+                        <br/>
+                    <div className="form-group">
+                        <label>Last Name:</label>
+                        <input
+                            type="text"
+                            name="lastName"
+                            onChange={(e) => setLastName(e.target.value)}
+                            value={lastName}
+                        />
+                        {errors?.lastName && (
+                            <span className="error-message">
+                                {errors.lastName?.properties?.message}
+                            </span>
+                        )}
+                    </div>
+                        <br/>
+                    <div className="form-group">
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        />
+                        {errors?.email && (
+                            <span className="error-message">
+                                {errors.email?.properties?.message}
+                            </span>
+                        )}
+                    </div>
+                        <br/>
+                    <div className="form-group">
+                        <label>Password:</label>
+                        <input
+                            type="password"
+                            name="email"
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
+                        />
+                        {errors?.password && (
+                            <span className="error-message">
+                                {errors.password?.properties?.message}
+                            </span>
+                        )}
+                    </div>
+                        <br/>
+                    <div className="form-group">
+                        <label>Confirm Password:</label>
+                        <input
+                            type="password"
+                            name="confirmPassword"
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            value={confirmPassword}
+                        />
+                        {errors?.confirmPassword ? (
+                            <span className="error-message">
+                                {errors.confirmPassword?.properties?.message}
+                            </span>
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                        <br/>
+                    <input type="submit" value="Sign Up" className="btn" />
+                </form>
+            </fieldset>
+        );
+    };
+
+export default OfficerSignUp;

@@ -9,16 +9,15 @@ import '../Main.css';
 function adminAdd() {
     return (
         <div>
-            <HeadPanel/>
-            <div class="register_page_wrapper">
-                <h1>
+            <h1>
                     Admin
                 </h1>
-                
+            <div class="register_page_wrapper">
                 <div id="login">
                     <h3>
                         Add an Officer
                     </h3>
+                    <br/>
                 <SignUp />
                 <br/>
                 <p> 
@@ -32,6 +31,12 @@ function adminAdd() {
                 <p>
                     Once their credentials have been set, they are not able to modify them unless the admin removes them
                 </p>
+                </div>
+                <div id="add_items">
+                    This is where we'll add the add items
+                </div>
+                <div id="remove_items">
+                    This is where we'll remove items
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ function App() {
           <Router>
             <HomePage path="/"/>
             <About path="/About"/>
-            <AdminAdd path="/adminAdd"/>
+            <AdminAdd path="/admin_supreme"/>
             <UserProfile path="/userProfile"/>
             <OfficerForm path="/officer"/>
             <ViewCart path="/Cart"/>

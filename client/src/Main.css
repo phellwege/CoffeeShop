@@ -149,3 +149,14 @@ ul a {
     font-weight: bold;
     font-size: 125%;
 }
+.register_page_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#add_items {
+    margin: 10px;
+}
+#remove_items {
+    margin:10px;
+}
