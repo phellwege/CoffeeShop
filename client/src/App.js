@@ -2,13 +2,14 @@ import React from 'react';
 import { Router } from '@reach/router';
 import HomePage from './Views/HomePage';
 import About from './Views/about';
-import AdminForm from './Views/adminForm';
+import AdminForm from './Components/adminForm';
 import UserProfile from './Views/userProfile';
-import OfficerForm from './Views/officerForm';
+import OfficerForm from './Components/officerForm';
 import ViewCart from './Views/viewCart';
 import Products from './Views/products';
 import ProductDetail from './Views/productDetail';
 import UserReg from './Views/userReg';
+import UserLogin from './Views/userLogin';
 
 import "./Main.css"
 
@@ -27,6 +28,7 @@ function App() {
             <Products path="/Products"/>
             <ProductDetail path="/ProductDetail"/>
             <UserReg path="/UserReg"/>
+            <UserLogin path="/userLogin"/>
           </Router>
       </React.Fragment>
     </div>

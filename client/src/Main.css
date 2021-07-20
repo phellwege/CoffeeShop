@@ -136,3 +136,16 @@ ul a {
 .product_wrapper {
     display: flex;
 }
+#login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+}
+#login a { 
+    color: blue;
+    font-weight: bold;
+    font-size: 125%;
+}

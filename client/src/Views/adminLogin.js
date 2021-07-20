@@ -16,10 +16,10 @@ import { Link } from '@reach/router'
         const register = (event) => {
             event.preventDefault();
 
-            const newUser = { username, firstName, lastName, email, password, confirmPassword };
+            const newAdmin = { username, firstName, lastName, email, password, confirmPassword };
 
             axios
-                .post("http://localhost:8000/api/register", newUser, {
+                .post("http://localhost:8000/api/register", newAdmin, {
                     withCredentials: true,
                 })
                 .then((res) => {

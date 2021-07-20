@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
 import { navigate } from "@reach/router";
-function login() {
+import '../Main.css';
+
     
     const Login = ({ setLoggedIn }) => {
         const [email, setEmail] = useState("");
@@ -32,7 +33,7 @@ function login() {
 
         return (
             <fieldset>
-                <legend>Sign In</legend>
+                <legend>Login</legend>
                 <form onSubmit={login}>
                     <p className="form-group">
                         <label>Email:</label>
@@ -43,6 +44,7 @@ function login() {
                             value={email}
                         />
                     </p>
+                    <br/>
                     <p className="form-group">
                         <label>Password:</label>
                         <input
@@ -52,7 +54,8 @@ function login() {
                             value={password}
                         />
                     </p>
-                    <input type="submit" value="Sign In" className="btn" />
+                    <br/>
+                    <input type="submit" value="Login" className="btn" />
                     <p className="error-message">{errorMessage ? errorMessage : ""}</p>
                 </form>
             </fieldset>
@@ -60,5 +63,5 @@ function login() {
     };
 
 
-}
-export default login;
+
+export default Login;

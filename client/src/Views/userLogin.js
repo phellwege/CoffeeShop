@@ -7,7 +7,7 @@ import SignUp from '../Components/registerUser';
 import Login from '../Components/login';
 import '../Main.css';
 
-function userReg() {
+function userLogin() {
     return (
         <div>
             <HeadPanel/>
@@ -21,10 +21,10 @@ function userReg() {
                 </h1>
                 
                 <div id="login">
-                <SignUp />
-                <h3>Already have an account? click <Link to="/userLogin">here</Link> to Login</h3>
+                <Login/>
+                <h3>Don't already have an account? click <Link to="/UserReg">here</Link> to Register</h3>
                 </div>
             </div>
         </div>
     )}
-export default userReg;
+export default userLogin;

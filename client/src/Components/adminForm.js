@@ -4,7 +4,6 @@ import { Link } from '@reach/router';
 import {navigate} from '@reach/router';
 
 //admin form makes officers
-
 // function adminForm() {
 
 export default (props) => {
@@ -38,27 +37,44 @@ export default (props) => {
             });
     }
 
-
-
     return (
         <div>
         <Link to={"/"}>Home</Link>
         <form onSubmit={onSubmitHandler}>
             <p>
-                <label>first name</label><br/>
-                <input type="text" onChange={(e)=>setFirstName(e.target.value)} value={firstName}/>
+                <label>first name</label>
+                <br/>
+                <input 
+                    type="text" 
+                    onChange={(e)=>setFirstName(e.target.value)} 
+                    value={firstName}
+                    />
             </p>
             <p>
-                <label>Last name</label><br/>
-                <input type="text" onChange={(e)=>setLastName(e.target.value)} value={lastName}/>
+                <label>Last name</label>
+                <br/>
+                <input 
+                    type="text" 
+                    onChange={(e)=>setLastName(e.target.value)} 
+                    value={lastName}
+                />
             </p>
             <p>
                 <label>email</label><br/>
-                <input type="text" onChange={(e)=>setEmail(e.target.value)} value={email}/>
+                <input 
+                    type="text" 
+                    onChange={(e)=>setEmail(e.target.value)} 
+                    value={email}
+                />
             </p>
             <p>
-                <label>Username</label><br/>
-                <input type="text" onChange={(e)=>setUsername(e.target.value)} value={username}/>
+                <label>Username</label>
+                <br/>
+                <input 
+                    type="text" 
+                    onChange={(e)=>setUsername(e.target.value)} 
+                    value={username}
+                />
             </p>
             <p>
                 <label>Password</label><br/>
@@ -66,7 +82,7 @@ export default (props) => {
             </p>
             <input type="submit"/>
 
-        {/* {errors?.firstName && (
+        {errors?.firstName && (
             <span style={{ color: "red" }}>{errors?.firstName?.message}</span>
         )}
         {errors?.lastName && (
@@ -80,7 +96,7 @@ export default (props) => {
         )}
         {errors?.password && (
             <span style={{ color: "red" }}>{errors?.password?.message}</span>
-        )} */}
+        )}
         </form>
         </div>
     )};
