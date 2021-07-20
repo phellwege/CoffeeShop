@@ -10,7 +10,7 @@ function HeadPanel() {
     return (
         <div class="head_page_wrapper">
             <div>
-                <Link to="/">Login</Link> || <Link to="/">Logout</Link>
+                <Link to="/">Login</Link> || <Link to="/">Logout</Link> || <Link to="/UserReg">Register</Link>
             </div>
             <div>
                 

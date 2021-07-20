@@ -8,6 +8,7 @@ import OfficerForm from './Views/officerForm';
 import ViewCart from './Views/viewCart';
 import Products from './Views/products';
 import ProductDetail from './Views/productDetail';
+import UserReg from './Views/userReg';
 
 import "./Main.css"
 
@@ -25,6 +26,7 @@ function App() {
             <ViewCart path="/Cart"/>
             <Products path="/Products"/>
             <ProductDetail path="/ProductDetail"/>
+            <UserReg path="/UserReg"/>
           </Router>
       </React.Fragment>
     </div>
