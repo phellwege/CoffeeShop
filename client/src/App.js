@@ -4,13 +4,14 @@ import HomePage from './Views/HomePage';
 import About from './Views/about';
 import AdminAdd from './Views/adminAdd';
 import UserProfile from './Views/userProfile';
-import OfficerForm from './Components/officerForm';
 import ViewCart from './Views/viewCart';
 import Products from './Views/products';
 import ProductDetail from './Views/productDetail';
 import UserReg from './Views/userReg';
 import UserLogin from './Views/userLogin';
-
+import AdminLogin from './Views/adminLogin';
+import OfficerLogin from './Views/officerLogin';
+import OfficerHome from './Views/officer_home';
 import "./Main.css"
 
 function App() {
@@ -20,9 +21,11 @@ function App() {
           <Router>
             <HomePage path="/"/>
             <About path="/About"/>
+            <AdminLogin path="/Admin"/>
+            <OfficerLogin path="/Officer"/>
+            <OfficerHome path="/officer_home"/>
             <AdminAdd path="/admin_supreme"/>
             <UserProfile path="/userProfile"/>
-            <OfficerForm path="/officer"/>
             <ViewCart path="/Cart"/>
             <Products path="/Products"/>
             <ProductDetail path="/ProductDetail"/>

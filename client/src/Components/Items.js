@@ -23,7 +23,7 @@ export default props => {
         <div>
             { props.items && props.items.map((item, idx) => {
                 return <p key={idx}>
-                    <Link to={`/items/${item._id}`}>
+                    <Link to={`/api/items/${item._id}`}>
                         {item.itemName}
                     </Link> 
                     {item.price} 

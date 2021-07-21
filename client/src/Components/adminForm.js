@@ -18,7 +18,7 @@ const register = (event) => {
     const newOfficer = { username, firstName, lastName, email, password, confirmPassword };
 
     axios
-        .post("http://localhost:8000/api/register", newOfficer, {
+        .post("http://localhost:8000/api/officer", newOfficer, {
             withCredentials: true,
         })
         .then((res) => {

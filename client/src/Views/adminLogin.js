@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import { Link } from '@reach/router';
 import NavPanel from '../Components/navPanel';
 import HeadPanel from '../Components/HeadPanel';
-import OfficerLogin from '../Components/officerLog';
+import AdminLog from '../Components/adminLog';
 import '../Main.css';
 
 function userLogin() {
     return (
         <div>
-            <div class="officer_page_wrapper">
+            <HeadPanel/>
+            <div class="register_page_wrapper">
+                {/* <h3>
+                    Hello ${user.username}
+                </h3>  */}
+            <NavPanel/>
                 <h1>
-                    Officer Login
+                    Login
                 </h1>
                 <div id="login">
-                <OfficerLogin/>
+                <AdminLog/>
                 </div>
             </div>
         </div>

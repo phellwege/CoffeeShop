@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import axios from 'axios';
-import { Link } from '@reach/router'
 import { navigate } from "@reach/router";
 import '../Main.css';
 
     
-    const Login = ({ setLoggedIn }) => {
+    const OfficerLog = ({ setLoggedIn }) => {
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
         const [errorMessage, setErrorMessage] = useState("");
@@ -23,7 +22,7 @@ import '../Main.css';
                 .then((res) => {
                     console.log(res);
                     setLoggedIn();
-                    navigate("/admins");
+                    navigate("/officer_home");
                 })
                 .catch((err) => {
                     console.log(err);
@@ -62,6 +61,4 @@ import '../Main.css';
         );
     };
 
-
-
-export default Login;
+export default OfficerLog;

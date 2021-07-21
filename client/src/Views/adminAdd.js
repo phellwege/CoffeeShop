@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React from 'react'
 import { Link } from '@reach/router';
-import NavPanel from '../Components/navPanel';
-import HeadPanel from '../Components/HeadPanel';
 import SignUp from '../Components/adminForm';
 import OfficerForm from '../Components/officerForm';
 import Items from '../Components/items';
