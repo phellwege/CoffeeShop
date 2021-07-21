@@ -32,8 +32,8 @@ export default (props) => {
                 navigate('/admin_supreme')
             })
             .catch(err=>{
-                console.log(err.response.data.errors);
-                setErrors(err.response.data.errors);
+                console.log(err.response?.data?.errors);
+                setErrors(err.response?.data?.errors);
             });
     }
     return (
@@ -45,22 +45,35 @@ export default (props) => {
             <p>
                 <label>Item name</label><br/>
                 <input type="text" onChange={(e)=>setItemName(e.target.value)} value={itemName}/>
+                {errors?.itemName && (<span className="error-message">{errors.itemName?.properties?.message}</span>)}
             </p>
             <p>
                 <label>Price</label><br/>
                 <input type="text" onChange={(e)=>setPrice(e.target.value)} value={price}/>
+                {errors?.price && (
+                <span style={{ color: "red" }}>{errors?.price?.message}</span>
+        )}
             </p>
             <p>
                 <label>Description</label><br/>
                 <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description}/>
+                {errors?.description && (
+                <span style={{ color: "red" }}>{errors?.description?.message}</span>
+            )}
             </p>
             <p>
                 <label>Number in Inventory</label><br/>
                 <input type="text" onChange={(e)=>setInventory(e.target.value)} value={inventory}/>
+                {errors?.inventory && (
+                <span style={{ color: "red" }}>{errors?.inventory?.message}</span>
+            )}
             </p>
             <p>
                 <label>Pictures</label><br/>
                 <input type="text" onChange={(e)=>setMedia(e.target.value)} value={media}/>
+            {errors?.media && (
+            <span style={{ color: "red" }}>{errors?.media?.message}</span>
+        )}
             </p>
             <p>
                 <label>category</label><br/>
@@ -68,22 +81,7 @@ export default (props) => {
             </p>
             <br/>
             <input type="submit"/>
-
-        {errors?.itemName && (
-            <span style={{ color: "red" }}>{errors?.itemName?.message}</span>
-        )}
-        {errors?.price && (
-            <span style={{ color: "red" }}>{errors?.price?.message}</span>
-        )}
-        {errors?.inventory && (
-            <span style={{ color: "red" }}>{errors?.inventory?.message}</span>
-        )}
-        {errors?.description && (
-            <span style={{ color: "red" }}>{errors?.description?.message}</span>
-        )}
-        {errors?.media && (
-            <span style={{ color: "red" }}>{errors?.media?.message}</span>
-        )}
+        
         </form>
         </div>
     )

@@ -15,7 +15,15 @@ const OfficerSignUp = (props) => {
 const register = (event) => {
     event.preventDefault();
 
-    const newOfficer = { username, firstName, lastName, email, password, confirmPassword };
+    const newOfficer = 
+    { 
+        username, 
+        firstName, 
+        lastName, 
+        email, 
+        password, 
+        confirmPassword 
+    };
 
     axios
         .post("http://localhost:8000/api/officer", newOfficer, {
@@ -32,7 +40,7 @@ const register = (event) => {
         })
         .catch((err) => {
             console.log(err);
-            setErrors(err.response.data.errors);
+            setErrors(err.response);
         });
 };
     return (

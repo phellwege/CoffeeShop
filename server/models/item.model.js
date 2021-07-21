@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 const ItemSchema = new mongoose.Schema({
     itemName: {
         type: String,
-        required: [true, "Item name is required"]
+        // required: [true, "Item name is required"]
     },
-    Price: {
+    price: {
         type: String,
-        required: [true, "Price is required"]
+        // required: [true, "Price is required"]
     },
-    Inventory: {
+    inventory: {
         type: String,
-        required: [true, "amount inventoried is required"],
+        // required: [true, "amount inventoried is required"],
     },
-    Description: {
+    description: {
         type: String,
-        required: [true, "Description is required"],
+        // required: [true, "Description is required"],
     },
-    Media: {
+    media: {
         type: String,
-        required: [true, "Media is required"],
+        // required: [true, "Media is required"],
     },
-    Category: {
+    category: {
         type: String,
-        required: [true, "Category is required"],
+        // required: [true, "Category is required"],
     },
 
 }, { timestamps: true });
