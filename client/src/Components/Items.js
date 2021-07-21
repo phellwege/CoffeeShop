@@ -50,14 +50,17 @@ export default props => {
             <table striped bordered hover variant="dark">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Actions</th>
+                        <th>Item Name </th>
+                        <th>price </th>
+                        <th>number in inventory </th>
+                        <th>description </th>
+                        <th>pictures </th>
+                        <th>category </th>
                     </tr>
                 </thead>
                 <tbody>
                     <div>
-                    {items.map((item, idx) =>  {
+                    {props.items && props.items.map((item, idx) =>  {
                         return (
                         <tr key={idx}>
                             <td>
