@@ -6,7 +6,7 @@ import HeadPanel from '../Components/HeadPanel';
 import SignUp from '../Components/adminForm';
 import OfficerForm from '../Components/officerForm';
 import Items from '../Components/items';
-
+import ShowOfficer from '../Components/showOfficers';
 import '../Main.css';
 
 function adminAdd() {
@@ -37,6 +37,11 @@ function adminAdd() {
                 <p>
                     Once their credentials have been set, they are not able to modify them unless the admin removes them
                 </p>
+                <br/>
+                <h3>
+                    Current Officers
+                </h3>
+                <ShowOfficer/>
                 </div>
                 <div id="add_items">
                     <OfficerForm/>

@@ -5,9 +5,9 @@ import { Link } from '@reach/router'
 export default props => {
     const { removeFromDom } = props;
     const deleteOfficer = (OfficerId) => {
-        axios.delete('http://localhost:8000/api/item/delete/' + officerId)
+        axios.delete('http://localhost:8000/api/item/delete/' + OfficerId)
             .then(res => {
-                removeFromDom(officerId)
+                removeFromDom(OfficerId)
             })
     }
 
@@ -15,10 +15,8 @@ export default props => {
         <div>
             { props.officers && props.officers.map((officer, idx) => {
                 return <p key={idx}>
-                    <Link to={`/officers/${officer._id}`}>
-                        {officer.FirstName}
-                    </Link> 
-                    <button onClick={(e) => { deleteItem(officer._id) }}>
+                        {officer.FirstName} {officer.LastName}
+                    <button onClick={(e) => { deleteOfficer(officer._id) }}>
                     Delete
                     </button></p>
             })}
