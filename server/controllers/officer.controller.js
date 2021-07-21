@@ -1,4 +1,6 @@
 const { Officer } = require('../models/officer.model');
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 module.exports = {
     index:(request, response) => {

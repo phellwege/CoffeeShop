@@ -1,5 +1,6 @@
 const { Admin } = require('../models/admin.model');
-
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 module.exports = {
     index:(request, response) => {
         Admin.find().sort({name:1})

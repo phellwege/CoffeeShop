@@ -48,7 +48,6 @@ const register = (event) => {
                             onChange={(e) => setUsername(e.target.value)}
                             value={username}
                         />
-                        {/* ?. is called optional chaining, lets you safely try to access keys that might not exist and avoid errors */}
                         {errors?.username && (
                             <span className="error-message">
                                 {errors.username?.properties?.message}
@@ -133,7 +132,7 @@ const register = (event) => {
                         )}
                     </div>
                         <br/>
-                    <input type="submit" value="Sign Up" className="btn" />
+                    <input type="submit" value="Register" className="btn" />
                 </form>
             </fieldset>
         );

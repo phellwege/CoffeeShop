@@ -23,13 +23,14 @@ export default (props) => {
             inventory: inventory,
             description: description,
             media: media,
+            category: category,
         };
         axios.post('http://localhost:8000/api/item',
             data,
         )
             .then(res => {
                 console.log(res)
-                navigate('/')
+                navigate('/admin_supreme')
             })
             .catch(err=>{
                 console.log(err.response.data.errors);
