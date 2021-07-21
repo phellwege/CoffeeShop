@@ -12,17 +12,12 @@ function userLogin() {
         <div>
             <HeadPanel/>
             <div class="register_page_wrapper">
-                {/* <h3>
-                    Hello ${user.username}
-                </h3>  */}
-            <NavPanel/>
-                <h1>
-                    Login
-                </h1>
-                
                 <div id="login">
-                <Login/>
-                <h3>Don't already have an account? click <Link to="/UserReg">here</Link> to Register</h3>
+                    <h1>
+                        Login
+                    </h1>
+                    <Login/>
+                    <h3>Don't already have an account? click <Link to="/UserReg">here</Link> to Register</h3>
                 </div>
             </div>
         </div>

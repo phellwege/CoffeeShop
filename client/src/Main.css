@@ -153,6 +153,7 @@ ul a {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
 }
 #add_items {
     margin: 10px;

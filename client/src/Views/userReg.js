@@ -12,15 +12,10 @@ function userReg() {
         <div>
             <HeadPanel/>
             <div class="register_page_wrapper">
-                {/* <h3>
-                    Hello ${user.username}
-                </h3>  */}
-            <NavPanel/>
-                <h1>
-                    Login
-                </h1>
-                
                 <div id="login">
+                    <h1>
+                    Login
+                    </h1>
                 <SignUp />
                 <h3>Already have an account? click <Link to="/userLogin">here</Link> to Login</h3>
                 </div>
