@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
 import HeadPanel from '../Components/HeadPanel';
-import NavPanel from '../Components/navPanel';
+import NavPanel from '../Components/NavPanel';
 import cart_logo from '../Static/Cart2.png';
 import cup from '../Static/cup.jpeg';
 import cup2 from '../Static/cup2.jpeg';

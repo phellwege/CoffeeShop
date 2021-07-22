@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from '@reach/router';
-import SignUp from '../Components/adminForm';
-import OfficerForm from '../Components/officerForm';
-import Items from '../Components/items';
-import ShowOfficer from '../Components/showOfficers';
+import SignUp from '../Components/AdminForm';
+import OfficerForm from '../Components/OfficerForm';
+import Items from '../Components/Items';
+import ShowOfficer from '../Components/ShowOfficers';
 import '../Main.css';
 
 function adminAdd() {

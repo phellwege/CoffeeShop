@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from '@reach/router';
-import NavPanel from '../Components/navPanel';
+import NavPanel from '../Components/NavPanel';
 import HeadPanel from '../Components/HeadPanel';
-import OfficerLogin from '../Components/officerLog';
+import OfficerLogin from '../Components/OfficerLog';
 import '../Main.css';
 
 function userLogin() {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
-import NavPanel from '../Components/navPanel';
+import NavPanel from '../Components/NavPanel';
 import HeadPanel from '../Components/HeadPanel';
-import AdminLog from '../Components/adminLog';
+import AdminLog from '../Components/AdminLog';
 import '../Main.css';
 
 function userLogin() {

@@ -4,7 +4,7 @@ import {navigate} from '@reach/router'
 
 // officer form makes items
 
-export default (props) => {
+const OfficerForm = (props) => {
     const [itemName, setItemName] = useState(""); 
     const [price, setPrice] = useState("");
     const [inventory, setInventory] = useState("");
@@ -86,3 +86,5 @@ export default (props) => {
         </div>
     )
 }
+
+export default OfficerForm

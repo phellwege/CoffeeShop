@@ -1,4 +1,5 @@
 require("dotenv").config();
+const port = 8000;
 
 const express = require("express"),
     cookieParser = require("cookie-parser"),

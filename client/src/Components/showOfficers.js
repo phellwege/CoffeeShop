@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router'
 
-export default props => {
+const ShowOfficers = props => {
     const { removeFromDom } = props;
     const deleteOfficer = (OfficerId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + OfficerId)
@@ -23,3 +23,4 @@ export default props => {
         </div>
     )
 }
+export default ShowOfficers

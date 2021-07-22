@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from '@reach/router'
 
 
-export default props => {
+const Items = props => {
     const { removeFromDom } = props;
     const [items, setItems] = useState([]);
     const deleteItem = (itemId) => {
@@ -95,3 +95,4 @@ export default props => {
         </div>
     )
 }
+export default Items

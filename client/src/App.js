@@ -1,17 +1,17 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import HomePage from './Views/HomePage';
-import About from './Views/about';
-import AdminAdd from './Views/adminAdd';
-import UserProfile from './Views/userProfile';
-import ViewCart from './Views/viewCart';
-import Products from './Views/products';
-import ProductDetail from './Views/productDetail';
-import UserReg from './Views/userReg';
-import UserLogin from './Views/userLogin';
-import AdminLogin from './Views/adminLogin';
-import OfficerLogin from './Views/officerLogin';
-import OfficerHome from './Views/officer_home';
+import About from './Views/About';
+import AdminAdd from './Views/AdminAdd';
+import UserProfile from './Views/UserProfile';
+import ViewCart from './Views/ViewCart';
+import Products from './Views/Products';
+import ProductDetail from './Views/ProductDetail';
+import UserReg from './Views/UserReg';
+import UserLogin from './Views/UserLogin';
+import AdminLogin from './Views/AdminLogin';
+import OfficerLogin from './Views/OfficerLogin';
+import OfficerHome from './Views/OfficerHome';
 import "./Main.css"
 
 function App() {

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
-import NavPanel from '../Components/navPanel';
+import NavPanel from '../Components/NavPanel';
 import HeadPanel from '../Components/HeadPanel';
 import '../Main.css';
 import BigBackGround from '../Static/Background.jpeg';
 
 
 
-export default () => {
+const HomePage = () => {
     return (
         <div 
         style = {{
@@ -30,3 +30,4 @@ export default () => {
         </div>
     )
 }
+export default HomePage

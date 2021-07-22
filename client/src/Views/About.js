@@ -4,8 +4,8 @@ import { Link } from "@reach/router";
 import MapContainer from "../Components/GoogleMaps";
 import HeadPanel from "../Components/HeadPanel";
 import blank from "../Static/blank_dude.png";
-import NavPanel from "../Components/navPanel";
-import Social from "../Components/social";
+import NavPanel from "../Components/NavPanel";
+import Social from "../Components/Social";
 
 
 function About() {
