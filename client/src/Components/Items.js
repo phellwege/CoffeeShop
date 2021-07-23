@@ -14,21 +14,12 @@ const Items = props => {
                 console.log(res);
             })
     }
-        // const {} = props;
-    // const updateExistingItem = (itemId) => {
-    //     axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
-    //         .then(res => {
-    //             updateExistingItem(itemId)
-    //         })
-    // }
-
     useEffect(() => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
                 setItems(res.data);
             });
     }, [items]);
-
     return (
         <div>
             <table striped bordered hover variant="dark">
