@@ -16,14 +16,6 @@ const OfficerForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        // const data = {
-        //     itemName: itemName,
-        //     price: price,
-        //     inventory: inventory,
-        //     description: description,
-        //     media: media,
-        //     category: category,
-        // };
 
         const files = [...document.querySelector("input[type=file]").files];
         const promises = files.map((file) => {
@@ -66,22 +58,7 @@ const OfficerForm = (props) => {
                     setErrors(err.response.data.errors);
                 });
 
-            // fetch('https://api/item', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(data),
-            // })
-            //     .then(response => response.json())
-            //     .then(data => {
-            //         console.log('Success:', data);
-            //         setResponse(data);
-            //     })
-            //     .catch((error) => {
-            //         console.error('Error:', error);
-            //         setErrors("Sorry we couldn't identitfy this plant, there was no match in the database. Would you like to try a different image?")
-            //     });
+            
         });
     };
     return (
