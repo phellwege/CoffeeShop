@@ -17,7 +17,10 @@ const OfficerForm = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
 
+        // finds file from form submission 
         const files = [...document.querySelector("input[type=file]").files];
+
+        //maps through all files/images uploaded and preps for POST request
         const promises = files.map((file) => {
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
@@ -33,6 +36,7 @@ const OfficerForm = (props) => {
         Promise.all(promises).then((base64files) => {
             console.log(base64files);
 
+            //set data for POST
             const data = {
                 itemName: itemName,
                 price: price,
@@ -57,7 +61,7 @@ const OfficerForm = (props) => {
                 .catch((err) => {
                     setErrors(err.response.data.errors);
                 });
-
+                //BOOMSKY D.O.N.E.
             
         });
     };
@@ -162,70 +166,3 @@ const OfficerForm = (props) => {
 };
 
 export default OfficerForm;
-
-/**
- * 
-    const onSubmitHandler = (e) => {
-        //prevent default behavior of the submit
-        e.preventDefault();
-        setLoading(true)
-
-        const files = [...document.querySelector('input[type=file]').files];
-        const promises = files.map((file) => {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = (event) => {
-                    const res = event.target.result;
-                    console.log(res);
-                    resolve(res);
-                }
-                reader.readAsDataURL(file)
-            })
-        })
-
-        Promise.all(promises).then((base64files) => {
-            console.log(base64files)
-
-            const data = {
-                api_key: "----insert key------",
-                images: base64files,
-                modifiers: ["crops_fast", "similar_images"],
-                plant_language: "en",
-                plant_details: ["common_names",
-                    "url",
-                    "name_authority",
-                    "wiki_description",
-                    "taxonomy",
-                    "synonyms"]
-            };
-
-            fetch('https://api.plant.id/v2/identify', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                    setResponse(data);
-                    setLoading(false);
-                    setLoaded(true); //set page to loaded after data is set to display results
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    setErrors("Sorry we couldn't identitfy this plant, there was no match in the database. Would you like to try a different image?")
-                });
-        })
-
-    };
-    
-    if(!errors){
-    return (
-        <div className="center">
-            <form className="Identify" onSubmit={onSubmitHandler}>
-                <input type="file" multiple />
-                <button type="submit">submit</button>
-            </form>
- */
