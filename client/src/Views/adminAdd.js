@@ -45,7 +45,6 @@ function adminAdd() {
                     This is where we'll add the add items
                 </div>
                 <div id="remove_items">
-                    This is where we'll display and remove items
                     <Items/>
                 </div>
             </div>

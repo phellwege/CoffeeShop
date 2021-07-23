@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, {Component, useState, useEffect}from 'react';
 import axios from 'axios';
-import {navigate} from '@reach/router'
+import {navigate} from '@reach/router';
 
 // officer form makes items
 
