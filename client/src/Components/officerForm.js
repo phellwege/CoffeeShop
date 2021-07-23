@@ -76,7 +76,7 @@ const OfficerForm = (props) => {
             {errors?.media && (
             <span style={{ color: "red" }}>{errors?.media?.message}</span>
             )}
-            </p>    
+            </p>
             <p>
                 <label>category</label><br/>
                 <input type="text" onChange={(e)=>setCategory(e.target.value)} value={category}/>

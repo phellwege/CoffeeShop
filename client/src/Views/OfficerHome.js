@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
 import OfficerForm from '../Components/officerForm';
-import Items from '../Components/items';
+import Items from '../Components/Items';
 import '../Main.css';
 
 function OfficerHome() {

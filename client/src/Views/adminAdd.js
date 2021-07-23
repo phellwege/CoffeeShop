@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from '@reach/router';
 import SignUp from '../Components/adminForm';
 import OfficerForm from '../Components/officerForm';
-import Items from '../Components/items';
+import Items from '../Components/Items';
 import ShowOfficer from '../Components/showOfficers';
 import '../Main.css';
 
