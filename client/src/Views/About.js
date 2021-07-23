@@ -6,7 +6,7 @@ import HeadPanel from "../Components/headPanel";
 import blank from "../Static/blank_dude.png";
 import NavPanel from "../Components/navPanel";
 import Social from "../Components/social";
-import Footer from '../Components/footer';
+
 
 function About() {
     return (
@@ -65,7 +65,6 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
     );
 }
