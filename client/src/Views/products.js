@@ -5,6 +5,8 @@ import HeadPanel from '../Components/headPanel';
 import NavPanel from '../Components/navPanel';
 import Products from '../Components/products';
 import Footer from '../Components/footer';
+
+
 function products() {
 
 
@@ -23,8 +25,6 @@ function products() {
                         Categories
                     </h2>
                     <ul>
-                        <li>Sampler</li>
-                        {/* <li>${item.category}</li> */}
                 <Products/>
                     </ul>
                     </div>

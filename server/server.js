@@ -8,7 +8,8 @@ const express = require("express"),
     cors = require("cors");
 
 require("./config/mongoose.config")(process.env.DB_NAME);
-
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 const app = express();
 
 app.use(cookieParser());

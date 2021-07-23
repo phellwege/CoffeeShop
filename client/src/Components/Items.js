@@ -20,7 +20,7 @@ const Items = props => {
                 setItems(res.data);
                 setItems(items.sort((a, b) => a.category.localeCompare(b.category)));
             });
-    }, [items]);
+    }, []);
     return (
         <div>
             <table striped bordered hover>

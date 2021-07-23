@@ -35,6 +35,7 @@ const OfficerForm = (props) => {
                 setCategory("")
                 setDescription("");
                 setErrors("")
+                
             })
             .catch(err=>{
                 setErrors(err.response.data.errors);
@@ -71,7 +72,7 @@ const OfficerForm = (props) => {
             </p>
             <p>
                 <label>Pictures</label><br/>
-                <input type="text" onChange={(e)=>setMedia(e.target.value)} value={media}/>
+                <input type="file" onChange={(e)=>setMedia(e.target.value)} value={media} enctype="multipart/form-data" name="media"/>
             {errors?.media && (
             <span style={{ color: "red" }}>{errors?.media?.message}</span>
             )}
