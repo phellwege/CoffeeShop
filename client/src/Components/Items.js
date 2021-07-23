@@ -4,7 +4,9 @@ import axios from 'axios';
 
 const Items = props => {
     const [items, setItems] = useState([]);
-    const { removeFromDom } = props;
+    const removeFromDom = itemId => {
+        setItems(items.filter(item => item._id !== itemId));
+    }
     const deleteItem = (itemId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + itemId)
             .then(res => {
@@ -16,9 +18,6 @@ const Items = props => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
                 setItems(res.data);
-                console.log("does this display?")
-                console.log(res.data)
-                console.log(items)
             });
     }, []);
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from "axios";
 import { Link } from "@reach/router";
-import MapContainer from "../Components/GoogleMaps";
-import HeadPanel from "../Components/HeadPanel";
+import MapContainer from "../Components/googleMaps";
+import HeadPanel from "../Components/headPanel";
 import blank from "../Static/blank_dude.png";
-import NavPanel from "../Components/NavPanel";
+import NavPanel from "../Components/navPanel";
 import Social from "../Components/social";
 
 
