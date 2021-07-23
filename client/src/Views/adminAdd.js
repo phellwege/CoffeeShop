@@ -12,7 +12,7 @@ function adminAdd() {
             <h1>
                 Admin 
             </h1>
-            <h2>
+            <h2 id="special_h2">
                 <Link to="/">View site</Link>
             </h2>
             <div class="register_page_wrapper">

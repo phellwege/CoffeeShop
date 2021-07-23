@@ -16,7 +16,6 @@ const Items = props => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
                 setItems(res.data);
-                // setItemName(res.data.itemName)
                 console.log("does this display?")
                 console.log(res.data)
                 console.log(items)
