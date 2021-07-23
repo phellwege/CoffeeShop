@@ -37,8 +37,7 @@ const OfficerForm = (props) => {
                 setErrors("")
             })
             .catch(err=>{
-                console.log(err.res);
-                setErrors(err.res);
+                setErrors(err.response.data.errors);
             });
     }
     return (
