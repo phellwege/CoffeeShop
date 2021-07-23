@@ -4,12 +4,9 @@ import axios from 'axios';
 
 const Items = props => {
     const [items, setItems] = useState([]);
-    // const { removeFromDom } = props;
-
     const removeFromDom = itemId => {
         setItems(items.filter(item => item._id !== itemId));
     }
-
     const deleteItem = (itemId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + itemId)
             .then(res => {
@@ -17,24 +14,12 @@ const Items = props => {
                 console.log(res);
             })
     }
-        // const {} = props;
-    // const updateExistingItem = (itemId) => {
-    //     axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
-    //         .then(res => {
-    //             updateExistingItem(itemId)
-    //         })
-    // }
-
     useEffect(() => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
                 setItems(res.data);
-                console.log("does this display?")
-                console.log(res.data)
-                console.log(items)
             });
     }, [items]);
-
     return (
         <div>
             <table striped bordered hover variant="dark">
