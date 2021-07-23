@@ -4,21 +4,19 @@ import axios from 'axios';
 
 const Items = props => {
     const [items, setItems] = useState([]);
-    const removeFromDom = itemId => {
-        setItems(items.filter(item => item._id !== itemId));
-    }
-    const deleteItem = (itemId) => {
-        axios.delete('http://localhost:8000/api/item/delete/' + itemId)
-            .then(res => {
-                removeFromDom(itemId)
-                console.log(res);
-            })
-    }
+
     useEffect(() => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
                 setItems(res.data);
                 setItems(items.sort((a, b) => a.category.localeCompare(b.category)));
+                // setItems(items.sort(function(a, b){
+                //     if(a.firstname < b.firstname) { return -1; }
+                //     if(a.firstname > b.firstname) { return 1; }
+                //     return 0;
+                // })
+                // );
+
             });
     }, [items]);
     return (
@@ -32,7 +30,6 @@ const Items = props => {
                         <th>description </th>
                         <th>pictures </th>
                         <th>category </th>
-                        <th>options</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,9 +55,7 @@ const Items = props => {
                                 {item.category}
                             </td>
                             <td>
-                            <button onClick={(e) => { deleteItem(item._id) }}>
-                                Delete
-                            </button>
+
                             </td>
                         </tr>
 )}

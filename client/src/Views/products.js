@@ -3,8 +3,11 @@ import axios from 'axios';
 import { Link } from '@reach/router'
 import HeadPanel from '../Components/headPanel';
 import NavPanel from '../Components/navPanel';
+import Products from '../Components/products';
 import Footer from '../Components/footer';
 function products() {
+
+
     return (
         <div>
             <HeadPanel/>
@@ -22,6 +25,7 @@ function products() {
                     <ul>
                         <li>Sampler</li>
                         {/* <li>${item.category}</li> */}
+                <Products/>
                     </ul>
                     </div>
                 </div>
