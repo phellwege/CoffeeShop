@@ -175,6 +175,7 @@ ul a {
 }
 .footer_contact {
     position:fixed;
+    padding: 5px;
     bottom:0px;
     display: flex;
     background-color: white;
