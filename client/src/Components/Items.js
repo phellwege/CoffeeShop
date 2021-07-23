@@ -13,7 +13,7 @@ const Items = props => {
             })
     }
 
-    const {} = props;
+    // const {} = props;
     // const updateExistingItem = (itemId) => {
     //     axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
     //         .then(res => {
@@ -60,7 +60,7 @@ const Items = props => {
                 </thead>
                 <tbody>
                     <div>
-                    {props.items && props.items.map((item, idx) =>  {
+                    {items && items.map((item, idx) =>  {
                         return (
                         <tr key={idx}>
                             <td>
