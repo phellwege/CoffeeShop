@@ -29,7 +29,12 @@ const OfficerForm = (props) => {
         )
             .then(res => {
                 console.log(res)
-                navigate('/admin_supreme')
+                setItemName("");
+                setPrice("");
+                setInventory("");
+                setMedia("")
+                setCategory("")
+                setErrors("")
             })
             .catch(err=>{
                 console.log(err.response?.data?.errors);
@@ -45,39 +50,37 @@ const OfficerForm = (props) => {
             <p>
                 <label>Item name</label><br/>
                 <input type="text" onChange={(e)=>setItemName(e.target.value)} value={itemName}/>
-                {errors?.itemName && (<span className="error-message">{errors.itemName?.properties?.message}</span>)}
+                {errors?.itemName && 
+                (<span className="error-message">{errors.itemName?.properties?.message}</span>)}
             </p>
             <p>
                 <label>Price</label><br/>
                 <input type="text" onChange={(e)=>setPrice(e.target.value)} value={price}/>
                 {errors?.price && (
-                <span style={{ color: "red" }}>{errors?.price?.message}</span>
-        )}
+                <span style={{ color: "red" }}>{errors?.price?.message}</span>)}
             </p>
             <p>
                 <label>Description</label><br/>
                 <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description}/>
                 {errors?.description && (
-                <span style={{ color: "red" }}>{errors?.description?.message}</span>
-            )}
+                <span style={{ color: "red" }}>{errors?.description?.message}</span>)}
             </p>
             <p>
                 <label>Number in Inventory</label><br/>
                 <input type="text" onChange={(e)=>setInventory(e.target.value)} value={inventory}/>
-                {errors?.inventory && (
-                <span style={{ color: "red" }}>{errors?.inventory?.message}</span>
-            )}
+                {errors?.inventory && (<span style={{ color: "red" }}>{errors?.inventory?.message}</span>)}
             </p>
             <p>
                 <label>Pictures</label><br/>
                 <input type="text" onChange={(e)=>setMedia(e.target.value)} value={media}/>
             {errors?.media && (
             <span style={{ color: "red" }}>{errors?.media?.message}</span>
-        )}
-            </p>
+            )}
+            </p>    
             <p>
                 <label>category</label><br/>
                 <input type="text" onChange={(e)=>setCategory(e.target.value)} value={category}/>
+                {errors?.category && (<span style={{ color: "red" }}>{errors?.category?.message}</span>)}
             </p>
             <br/>
             <input type="submit"/>
