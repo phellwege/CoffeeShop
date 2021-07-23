@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from "axios";
-import { Link } from "@reach/router";
+
 import MapContainer from "../Components/googleMaps";
 import HeadPanel from "../Components/headPanel";
 import blank from "../Static/blank_dude.png";
