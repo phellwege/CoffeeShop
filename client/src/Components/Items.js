@@ -5,15 +5,13 @@ import { Link } from '@reach/router'
 
 const Items = props => {
     const { removeFromDom } = props;
-    const [items, setItems] = useState([]);
+    const [item, setItem] = useState({});
     const deleteItem = (itemId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + itemId)
             .then(res => {
                 removeFromDom(itemId)
             })
     }
-
-    const {} = props;
     // const updateExistingItem = (itemId) => {
     //     axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
     //         .then(res => {
@@ -23,8 +21,12 @@ const Items = props => {
     useEffect(() => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
-                setItems(res.data.results);
-                console.log("_______________")
+                setItem(res.data);
+                // setItemName(res.data.itemName)
+                console.log("does this display?")
+                console.log(res.data)
+                console.log(res.data.results)
+                console.log(item)
             });
     }, []);
 
