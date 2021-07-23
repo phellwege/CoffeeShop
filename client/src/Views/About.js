@@ -5,7 +5,7 @@ import MapContainer from "../Components/GoogleMaps";
 import HeadPanel from "../Components/HeadPanel";
 import blank from "../Static/blank_dude.png";
 import NavPanel from "../Components/NavPanel";
-import Social from "../Components/Social";
+import Social from "../Components/social";
 
 
 function About() {

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from '@reach/router';
 import NavPanel from '../Components/NavPanel';
 import HeadPanel from '../Components/HeadPanel';
-import AdminLog from '../Components/AdminLog';
+import AdminLog from '../Components/adminLog';
 import '../Main.css';
 
 function userLogin() {
