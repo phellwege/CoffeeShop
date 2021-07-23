@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from '@reach/router';
-import SignUp from '../Components/AdminForm';
+import SignUp from '../Components/adminForm';
 import OfficerForm from '../Components/OfficerForm';
 import Items from '../Components/Items';
-import ShowOfficer from '../Components/ShowOfficers';
+import ShowOfficer from '../Components/showOfficers';
 import '../Main.css';
 
 function adminAdd() {
@@ -12,7 +12,7 @@ function adminAdd() {
             <h1>
                 Admin 
             </h1>
-            <h2>
+            <h2 id="special_h2">
                 <Link to="/">View site</Link>
             </h2>
             <div class="register_page_wrapper">
@@ -45,7 +45,6 @@ function adminAdd() {
                     This is where we'll add the add items
                 </div>
                 <div id="remove_items">
-                    This is where we'll display and remove items
                     <Items/>
                 </div>
             </div>

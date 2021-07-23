@@ -1,52 +1,42 @@
 import React, {Component, useState, useEffect}from 'react'
 import axios from 'axios';
-import { Link } from '@reach/router'
 
 
 const Items = props => {
-    const { removeFromDom } = props;
     const [items, setItems] = useState([]);
+    // const { removeFromDom } = props;
+
+    const removeFromDom = itemId => {
+        setItems(items.filter(item => item._id !== itemId));
+    }
+
     const deleteItem = (itemId) => {
         axios.delete('http://localhost:8000/api/item/delete/' + itemId)
             .then(res => {
                 removeFromDom(itemId)
+                console.log(res);
             })
     }
-
-    // const {} = props;
+        // const {} = props;
     // const updateExistingItem = (itemId) => {
     //     axios.put('http://localhost:8000/api/item/' + itemId + '/edit')
     //         .then(res => {
     //             updateExistingItem(itemId)
     //         })
     // }
+
     useEffect(() => {
         axios.get('http://localhost:8000/api/items')
             .then(res => {
-                setItems(res.data.results);
-                console.log("_______________")
+                setItems(res.data);
+                console.log("does this display?")
+                console.log(res.data)
+                console.log(items)
             });
     }, []);
 
     return (
         <div>
-            {/* { props.items && props.items.map((item, idx) => {
-                return <p key={idx}>
-                    <Link to={`/api/item/${item._id}`}>
-                        {item.itemName}
-                    </Link> 
-                    {item.price} 
-                    {item.inventory} 
-                    {item.description} 
-                    {item.media} 
-                    {item.category}
-                    <button onClick={(e) => { updateExistingItem(item._id) }}>
-                    Edit
-                    </button>
-                    <button onClick={(e) => { deleteItem(item._id) }}>
-                    Delete
-                    </button></p>
-            })} */}
             <table striped bordered hover variant="dark">
                 <thead>
                     <tr>
@@ -56,11 +46,11 @@ const Items = props => {
                         <th>description </th>
                         <th>pictures </th>
                         <th>category </th>
+                        <th>options</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <div>
-                    {items && items.map((item, idx) =>  {
+                    {items.map((item, idx) =>  {
                         return (
                         <tr key={idx}>
                             <td>
@@ -89,7 +79,6 @@ const Items = props => {
                         </tr>
 )}
 )}
-                    </div>
                 </tbody>
             </table>
         </div>

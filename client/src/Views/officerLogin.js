@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from '@reach/router';
 import NavPanel from '../Components/NavPanel';
 import HeadPanel from '../Components/HeadPanel';
-import OfficerLogin from '../Components/OfficerLog';
+import OfficerLogin from '../Components/officerLog';
 import '../Main.css';
 
 function userLogin() {
