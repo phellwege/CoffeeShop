@@ -4,6 +4,7 @@ import SignUp from '../Components/adminForm';
 import OfficerForm from '../Components/officerForm';
 import Items from '../Components/items';
 import ShowOfficer from '../Components/showOfficers';
+import Footer from '../Components/footer';
 import '../Main.css';
 
 function adminAdd() {

@@ -8,7 +8,7 @@ import cup from '../Static/cup.jpeg';
 import cup2 from '../Static/cup2.jpeg';
 import bean from '../Static/bean1.jpeg';
 import bean2 from '../Static/bean2.jpeg';
-
+import Footer from '../Components/footer';
 import '../Main.css';
 
 function viewCart() {
@@ -71,6 +71,7 @@ function viewCart() {
                     </div>
                 </div>
         </div>
+        <Footer/>
         </div>
     )}
 export default viewCart;

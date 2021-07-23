@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from '@reach/router';
 import NavPanel from '../Components/navPanel';
 import HeadPanel from '../Components/headPanel';
+import Footer from '../Components/footer';
 import '../Main.css';
 import BigBackGround from '../Static/Background.jpeg';
 
@@ -27,6 +28,7 @@ const HomePage = () => {
                     Welcome to the Cafe
                 </h1>
             </div>
+            <Footer/>
         </div>
     )
 }

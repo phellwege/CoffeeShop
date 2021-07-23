@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from '@reach/router'
 import HeadPanel from '../Components/headPanel';
 import NavPanel from '../Components/navPanel';
-
+import Footer from '../Components/footer';
 function products() {
     return (
         <div>
@@ -28,6 +28,7 @@ function products() {
                     </ul>
                     </div>
                 </div>
+                <Footer/>
         </div>
 )}
 export default products;

@@ -5,6 +5,7 @@ import NavPanel from '../Components/navPanel';
 import HeadPanel from '../Components/headPanel';
 import SignUp from '../Components/registerUser';
 import Login from '../Components/login';
+import Footer from '../Components/footer';
 import '../Main.css';
 
 function userReg() {
@@ -20,6 +21,7 @@ function userReg() {
                 <h3>Already have an account? click <Link to="/userLogin">here</Link> to Login</h3>
                 </div>
             </div>
+            <Footer/>
         </div>
     )}
 export default userReg;
