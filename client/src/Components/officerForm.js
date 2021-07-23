@@ -12,7 +12,6 @@ const OfficerForm = (props) => {
     const [media, setMedia] = useState("");
     const [category, setCategory] = useState("");
     const [errors, setErrors] = useState(null);
-    //handler when the form is submitted
 
     const onSubmitHandler = e => {
         e.preventDefault();
@@ -32,8 +31,8 @@ const OfficerForm = (props) => {
                 navigate('/admin_supreme')
             })
             .catch(err=>{
-                console.log(err.response?.data?.errors);
-                setErrors(err.response?.data?.errors);
+                console.log(err.res);
+                setErrors(err.res);
             });
     }
     return (
@@ -45,7 +44,8 @@ const OfficerForm = (props) => {
             <p>
                 <label>Item name</label><br/>
                 <input type="text" onChange={(e)=>setItemName(e.target.value)} value={itemName}/>
-                {errors?.itemName && (<span className="error-message">{errors.itemName?.properties?.message}</span>)}
+                {errors?.itemName && (
+                <span className="error-message">{errors.itemName?.properties?.message}</span>)}
             </p>
             <p>
                 <label>Price</label><br/>
@@ -81,7 +81,6 @@ const OfficerForm = (props) => {
             </p>
             <br/>
             <input type="submit"/>
-        
         </form>
         </div>
     )

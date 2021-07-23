@@ -22,7 +22,7 @@ const Items = props => {
     }, [items]);
     return (
         <div>
-            <table striped bordered hover variant="dark">
+            <table striped bordered hover>
                 <thead>
                     <tr>
                         <th>Item Name </th>

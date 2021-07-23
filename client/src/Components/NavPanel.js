@@ -12,7 +12,7 @@ return (
             <Link to="/">Home</Link>
         </li>
         <li>
-            <Link to="/Products">Products +</Link> 
+            <Link to="/Products">Products</Link> 
         </li>
         <li>
             <Link to="/Cart">Checkout</Link>
