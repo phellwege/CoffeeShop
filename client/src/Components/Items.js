@@ -33,7 +33,7 @@ const Items = props => {
                 console.log(res.data)
                 console.log(items)
             });
-    }, []);
+    }, [items]);
 
     return (
         <div>
