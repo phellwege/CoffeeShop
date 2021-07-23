@@ -33,6 +33,7 @@ const OfficerForm = (props) => {
                 setInventory("");
                 setMedia("")
                 setCategory("")
+                setDescription("");
                 setErrors("")
             })
             .catch(err=>{
@@ -50,7 +51,7 @@ const OfficerForm = (props) => {
                 <label>Item name</label><br/>
                 <input type="text" onChange={(e)=>setItemName(e.target.value)} value={itemName}/>
                 {errors?.itemName && 
-                (<span className="error-message">{errors.itemName?.properties?.message}</span>)}
+                (<span style={{ color: "red" }} className="error-message">{errors.itemName?.properties?.message}</span>)}
             </p>
             <p>
                 <label>Price</label><br/>
