@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from '@reach/router';
 import SignUp from '../Components/adminForm';
-import OfficerForm from '../Components/OfficerForm';
-import Items from '../Components/Items';
+import OfficerForm from '../Components/officerForm';
+import Items from '../Components/items';
 import ShowOfficer from '../Components/showOfficers';
 import '../Main.css';
 
@@ -42,9 +42,7 @@ function adminAdd() {
                 </div>
                 <div id="add_items">
                     <OfficerForm/>
-                    This is where we'll add the add items
-                </div>
-                <div id="remove_items">
+                    <br/>
                     <Items/>
                 </div>
             </div>

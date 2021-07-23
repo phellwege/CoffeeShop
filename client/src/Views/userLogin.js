@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Link } from '@reach/router';
-import NavPanel from '../Components/NavPanel';
-import HeadPanel from '../Components/HeadPanel';
+import NavPanel from '../Components/navPanel';
+import HeadPanel from '../Components/headPanel';
 import SignUp from '../Components/registerUser';
 import Login from '../Components/login';
 import '../Main.css';
