@@ -75,7 +75,7 @@ I learned that making a login from scratch for a single page application (SPA) i
 
 - [W3Schools](https://www.w3schools.com/) - This has always been one of my go to's for any project that I have a minor question on.
 - [Stack Overflow](https://stackoverflow.com/) - Stack overflow is an amazing resource where most of the questions that you could possibly have, have already been answered.
-- [MDN Web Docs] (https://developer.mozilla.org/en-US/) - Mozilla is one of the most well written and easiest to digest sources of documentation available. I highly Recommend.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) - Mozilla is one of the most well written and easiest to digest sources of documentation available. I highly Recommend.
 
 ## Author
 
