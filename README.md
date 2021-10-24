@@ -15,7 +15,7 @@ This is a MERN E-commerce site
 
 ### Screenshot
 
-![](./client/Static/coffeeshop1.png)
+![](./Static/coffeeshop1.png)
 
 
 ### Built with
