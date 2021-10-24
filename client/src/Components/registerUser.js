@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { Link } from '@reach/router'
 
 
 // function register() {

@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Frontend Mentor - Tip calculator app solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+  - [Screenshot](#screenshot)
+  - [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Screenshot
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![](../Static/coffeeshop1.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built with
 
-### `npm run build`
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JavaScript
+- ReactJS
+- NodeJS
+- Express
+- MongoDB
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What I learned
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I learned to always check to see if someone has an NPM version of something you're trying to accomplish. After I built the multi-tiered login system. I did a quick google search and found it without an issue.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```html
+<h4>
+  Bill
+  <input class="forms" id="billMe" type="number" class="form-control" placeholder="0" name="0"/>
+</h4>
+<div id="buttons_form">
+                <h4>
+                Select Tip %
+                </h4>
+                <div>
+                    <button class="button" id="five" value=".05" onClick="getId(this)"> 5% </button>
+                    <button class="button" id="ten" value=".10" onClick="getId(this)"> 10% </button>
+                    <button class="button" id="fifteen" value=".15" onClick="getId(this)"> 15% </button>
+                </div>
+                <div>
+                    <button class="button" id="twentyFive" value=".25" onClick="getId(this)"> 25% </button>
+                    <button class="button" id="fifty" value=".50" onClick="getId(this)"> 50% </button>
+                    <input id="custom" type="number" class="form-control" placeholder="Custom" min="1" max="100" class="button" id="custom" onClick="getId(this)">
+                </input>
+                </div>
+            </div>
+```
+```css
+.button {
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    width: 28%;
+    padding: 1.5%;
+    font-size: 24px;
+    margin: 1%;
+    border-radius: .25em;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+.button:active {
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+```
+```js
+function getId(btn) {
+        const DeezeNuts = (btn.id)
+        var billAmt = document.getElementById("billMe").value;
+        var numOfPeople = document.getElementById("numberOfPeople").value;
+        var tipPercent = document.getElementById(DeezeNuts).value;
+        CalcTip(billAmt, tipPercent, numOfPeople)
+    }
+```
 
-### `npm run eject`
+### Useful resources
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [W3Schools](https://www.w3schools.com/) - This has always been one of my go to's for any project that I have a minor question on.
+- [Stack Overflow](https://stackoverflow.com/) - Stack overflow is an amazing resource where most of the questions that you could possibly have, have already been answered.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Website - [Peter Hellwege](http://peters-portfolio.net/)
+- Frontend Mentor - [@phellwege](https://www.frontendmentor.io/profile/yourusername)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Acknowledgments
 
-## Learn More
+I was introduced to Frontend Mentor by Brendan Sullivan, whom I attended a coding bootcamp with. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

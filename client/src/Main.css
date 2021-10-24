@@ -183,3 +183,8 @@ ul a {
     justify-content: space-evenly;
     color: darkgray;
 }
+@media only screen and (max-width: 720px) {
+    .google_maps {
+        margin-top: 0%;
+    }
+}
